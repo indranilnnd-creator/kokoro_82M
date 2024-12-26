@@ -1,8 +1,10 @@
 # https://github.com/yl4579/StyleTTS2/blob/main/models.py
 from istftnet import Decoder
 from munch import Munch
+from pathlib import Path
 from plbert import load_plbert
 from torch.nn.utils import weight_norm, spectral_norm
+import json
 import numpy as np
 import os
 import os.path as osp
@@ -550,15 +552,11 @@ def recursive_munch(d):
         return d
 
 def build_model(path, device):
-    args = recursive_munch(dict(
-        decoder=dict(
-            type='istftnet', upsample_kernel_sizes=[20, 12], upsample_rates=[10, 6], gen_istft_hop_size=5, gen_istft_n_fft=20,
-            resblock_dilation_sizes=[[1, 3, 5], [1, 3, 5], [1, 3, 5]], resblock_kernel_sizes=[3, 7, 11], upsample_initial_channel=512,
-        ),
-        dim_in=64, dropout=0.2, hidden_dim=512, max_conv_dim=512, max_dur=50,
-        multispeaker=True, n_layer=3, n_mels=80, n_token=178, style_dim=128
-    ))
-    assert args.decoder.type == 'istftnet', 'Decoder type unknown'
+    config = Path(__file__).parent / 'config.json'
+    assert config.exists(), f'Config path incorrect: config.json not found at {config}'
+    with open(config, 'r') as r:
+        args = recursive_munch(json.load(r))
+    assert args.decoder.type == 'istftnet', f'Unknown decoder type: {args.decoder.type}'
     decoder = Decoder(dim_in=args.hidden_dim, style_dim=args.style_dim, dim_out=args.n_mels,
             resblock_kernel_sizes = args.decoder.resblock_kernel_sizes,
             upsample_rates = args.decoder.upsample_rates,
