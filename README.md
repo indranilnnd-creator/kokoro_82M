@@ -6,7 +6,7 @@ base_model:
 - yl4579/StyleTTS2-LJSpeech
 pipeline_tag: text-to-speech
 ---
-<audio controls><source src="https://huggingface.co/hexgrad/Kokoro-82M/resolve/main/HEARME.wav" type="audio/wav"></audio>
+<audio controls><source src="https://huggingface.co/hexgrad/Kokoro-82M/resolve/main/demo/HEARME.wav" type="audio/wav"></audio>
 
 **Kokoro** is a frontier TTS model for its size of **82 million parameters** (text in/audio out).
 
@@ -85,7 +85,7 @@ The inference code was originally MIT licensed by the paper author. Note that th
 
 **Leaderboard:** [hf.co/spaces/Pendrokar/TTS-Spaces-Arena](https://huggingface.co/spaces/Pendrokar/TTS-Spaces-Arena)
 
-![TTS-Spaces-Arena-25-Dec-2024](TTS-Spaces-Arena-25-Dec-2024.png)
+![TTS-Spaces-Arena-25-Dec-2024](demo/TTS-Spaces-Arena-25-Dec-2024.png)
 
 The voice ranked in the Arena is a 50-50 mix of Bella and Sarah. For your convenience, this mix is included in this repository as `af.pt`, but you can trivially reproduce it like this:
 
