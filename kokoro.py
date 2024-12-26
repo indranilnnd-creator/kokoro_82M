@@ -131,8 +131,8 @@ def forward(model, tokens, ref_s, speed):
     asr = t_en @ pred_aln_trg.unsqueeze(0).to(device)
     return model.decoder(asr, F0_pred, N_pred, ref_s[:, :128]).squeeze().cpu().numpy()
 
-def generate(model, text, voicepack, speed=1):
-    ps = phonemize(text)
+def generate(model, text, voicepack, speed=1, ps=None):
+    ps = ps or phonemize(text)
     tokens = tokenize(ps)
     if not tokens:
         return None
