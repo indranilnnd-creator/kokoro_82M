@@ -5,6 +5,8 @@ language:
 base_model:
 - yl4579/StyleTTS2-LJSpeech
 ---
+<audio controls><source src="https://huggingface.co/hexgrad/Kokoro-82M/resolve/main/HEARME.wav" type="audio/wav"></audio>
+
 **Kokoro** is a frontier TTS model for its size of **82 million parameters** (text in/audio out).
 
 On 25 Dec 2024, Kokoro v0.19 weights were permissively released in full fp32 precision along with 2 voicepacks (Bella and Sarah), all under an Apache 2.0 license.
