@@ -71,8 +71,9 @@ No affiliation can be assumed between parties on different lines.
 
 **Model SHA256 Hash:** `3b0c392f87508da38fad3a2f9d94c359f1b657ebd2ef79f9d56d69503e470b0a`
 
-**Model Release Date:**
-- v0.19, Bella, Sarah: 25 Dec 2024
+**Releases:**
+- 25 Dec 2024: Model v0.19, `af_bella`, `af_sarah`
+- 26 Dec 2024: `am_adam`, `am_michael`
 
 **Licenses:**
 - Apache 2.0 weights in this repository
