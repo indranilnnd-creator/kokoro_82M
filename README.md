@@ -6,6 +6,8 @@ base_model:
 - yl4579/StyleTTS2-LJSpeech
 pipeline_tag: text-to-speech
 ---
+❤️ Kokoro Discord Server: https://discord.gg/QuGxSWBfQy
+
 <audio controls><source src="https://huggingface.co/hexgrad/Kokoro-82M/resolve/main/demo/HEARME.wav" type="audio/wav"></audio>
 
 **Kokoro** is a frontier TTS model for its size of **82 million parameters** (text in/audio out).
@@ -129,10 +131,6 @@ Kokoro v0.19 is limited in some ways, in its training set and architecture:
 
 ### Model Card Contact
 
-`@rzvzn` on Discord
-
-```py
-# TODO: Add Discord server
-```
+`@rzvzn` on Discord. Server invite: https://discord.gg/QuGxSWBfQy
 
 <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/08/terminator-zero-41-1.jpg" width="400" alt="kokoro" />
