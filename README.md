@@ -14,14 +14,17 @@ pipeline_tag: text-to-speech
 
 On 25 Dec 2024, Kokoro v0.19 weights were permissively released in full fp32 precision along with 2 voicepacks (Bella and Sarah), all under an Apache 2.0 license.
 
-At the time of release, Kokoro v0.19 was the #1🥇 ranked model in [TTS Spaces Arena](https://huggingface.co/spaces/Pendrokar/TTS-Spaces-Arena). With 82M params trained for <20 epochs on <100 total hours of audio, Kokoro achieved higher Elo in this single-voice Arena setting over models such as:
-- XTTS v2: 467M, CPML, >10k hours
-- Edge TTS: Microsoft, proprietary
-- MetaVoice: 1.2B, Apache, 100k hours
-- Parler Mini: 880M, Apache, 45k hours
-- Fish Speech: ~500M, CC-BY-NC-SA, 1M hours
+As of 28 Dec 2024, **8 unique Voicepacks have been released**: 2F 2M each for American and British English.
 
-Kokoro's ability to top this Elo ladder using relatively low compute and data suggests that the scaling law for traditional TTS models might have a steeper slope than previously expected.
+At the time of release, Kokoro v0.19 was the #1🥇 ranked model in [TTS Spaces Arena](https://huggingface.co/spaces/Pendrokar/TTS-Spaces-Arena). Kokoro had achieved higher Elo in this single-voice Arena setting over other models, using fewer parameters and less data:
+1. **Kokoro v0.19: 82M params, Apache, trained on <100 hours of audio, for <20 epochs**
+2. XTTS v2: 467M, CPML, >10k hours
+3. Edge TTS: Microsoft, proprietary
+4. MetaVoice: 1.2B, Apache, 100k hours
+5. Parler Mini: 880M, Apache, 45k hours
+6. Fish Speech: ~500M, CC-BY-NC-SA, 1M hours
+
+Kokoro's ability to top this Elo ladder suggests that the scaling law (Elo vs compute/data/params) for traditional TTS models might have a steeper slope than previously expected.
 
 You can find a hosted demo at [hf.co/spaces/hexgrad/Kokoro-TTS](https://huggingface.co/spaces/hexgrad/Kokoro-TTS).
 
@@ -40,21 +43,30 @@ from models import build_model
 import torch
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 MODEL = build_model('kokoro-v0_19.pth', device)
-VOICEPACK = torch.load('voices/af.pt', weights_only=True).to(device)
+VOICE_NAME = [
+    'af', # Default voice is a 50-50 mix of af_bella & af_sarah
+    'af_bella', 'af_sarah', 'am_adam', 'am_michael',
+    'bf_emma', 'bf_isabella', 'bm_george', 'bm_lewis',
+][0]
+VOICEPACK = torch.load(f'voices/{VOICE_NAME}.pt', weights_only=True).to(device)
+print(f'Loaded voice: {VOICE_NAME}')
 
 # 3️⃣ Call generate, which returns a 24khz audio waveform and a string of output phonemes
 from kokoro import generate
 text = "How could I know? It's an unanswerable question. Like asking an unborn child if they'll lead a good life. They haven't even been born."
-audio, out_ps = generate(MODEL, text, VOICEPACK)
+audio, out_ps = generate(MODEL, text, VOICEPACK, lang=VOICE_NAME[0])
+# Language is determined by the first letter of the VOICE_NAME:
+# 🇺🇸 'a' => American English => en-us
+# 🇬🇧 'b' => British English => en-gb
 
 # 4️⃣ Display the 24khz audio and print the output phonemes
 from IPython.display import display, Audio
 display(Audio(data=audio, rate=24000, autoplay=True))
 print(out_ps)
 ```
-This inference code was quickly hacked together on Christmas Day. It is not clean code and leaves a lot of room for improvement. If you'd like to contribute, feel free to open a PR.
+The inference code was quickly hacked together on Christmas Day. It is not clean code and leaves a lot of room for improvement. If you'd like to contribute, feel free to open a PR.
 
-### Model Description
+### Model Facts
 
 No affiliation can be assumed between parties on different lines.
 
@@ -67,15 +79,16 @@ No affiliation can be assumed between parties on different lines.
 
 **Trained by**: `@rzvzn` on Discord
 
-**Supported Languages:** English
+**Supported Languages:** American English, British English
 
 **Model SHA256 Hash:** `3b0c392f87508da38fad3a2f9d94c359f1b657ebd2ef79f9d56d69503e470b0a`
 
-**Releases:**
+### Releases
 - 25 Dec 2024: Model v0.19, `af_bella`, `af_sarah`
 - 26 Dec 2024: `am_adam`, `am_michael`
+- 28 Dec 2024: `bf_emma`, `bf_isabella`, `bm_george`, `bm_lewis`
 
-**Licenses:**
+### Licenses
 - Apache 2.0 weights in this repository
 - MIT inference code in [spaces/hexgrad/Kokoro-TTS](https://huggingface.co/spaces/hexgrad/Kokoro-TTS) adapted from [yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)
 - GPLv3 dependency in [espeak-ng](https://github.com/espeak-ng/espeak-ng)
@@ -117,12 +130,14 @@ assert torch.equal(af, torch.load('voices/af.pt', weights_only=True))
 
 ### Limitations
 
-Kokoro v0.19 is limited in some ways, in its training set and architecture:
+Kokoro v0.19 is limited in some specific ways, due to its training set and/or architecture:
 - [Data] Lacks voice cloning capability, likely due to small <100h training set
 - [Arch] Relies on external g2p (espeak-ng), which introduces a class of g2p failure modes
 - [Data] Training dataset is mostly long-form reading and narration, not conversation
 - [Arch] At 82M params, Kokoro almost certainly falls to a well-trained 1B+ param diffusion transformer, or a many-billion-param MLLM like GPT-4o / Gemini 2.0 Flash
-- [Data] Multilingual capability is architecturally feasible, but training data is almost entirely English
+- [Data] Multilingual capability is architecturally feasible, but training data is mostly English
+
+Refer to the [Philosophy discussion](https://huggingface.co/hexgrad/Kokoro-82M/discussions/5) to better understand these limitations.
 
 **Will the other voicepacks be released?** There is currently no release date scheduled for the other voicepacks, but in the meantime you can try them in the hosted demo at [hf.co/spaces/hexgrad/Kokoro-TTS](https://huggingface.co/spaces/hexgrad/Kokoro-TTS).
 
