@@ -86,18 +86,22 @@ VOCAB = get_vocab()
 def tokenize(ps):
     return [i for i in map(VOCAB.get, ps) if i is not None]
 
-en_us = phonemizer.backend.EspeakBackend(language='en-us', preserve_punctuation=True, with_stress=True)
-def phonemize(text, norm=True):
+phonemizers = dict(
+    a=phonemizer.backend.EspeakBackend(language='en-us', preserve_punctuation=True, with_stress=True),
+    b=phonemizer.backend.EspeakBackend(language='en-gb', preserve_punctuation=True, with_stress=True),
+)
+def phonemize(text, lang, norm=True):
     if norm:
         text = normalize_text(text)
-    ps = en_us.phonemize([text])
+    ps = phonemizers[lang].phonemize([text])
     ps = ps[0] if ps else ''
     # https://en.wiktionary.org/wiki/kokoro#English
     ps = ps.replace('kəkˈoːɹoʊ', 'kˈoʊkəɹoʊ').replace('kəkˈɔːɹəʊ', 'kˈəʊkəɹəʊ')
     ps = ps.replace('ʲ', 'j').replace('r', 'ɹ').replace('x', 'k').replace('ɬ', 'l')
     ps = re.sub(r'(?<=[a-zɹː])(?=hˈʌndɹɪd)', ' ', ps)
     ps = re.sub(r' z(?=[;:,.!?¡¿—…"«»“” ]|$)', 'z', ps)
-    ps = re.sub(r'(?<=nˈaɪn)ti(?!ː)', 'di', ps)
+    if lang == 'a':
+        ps = re.sub(r'(?<=nˈaɪn)ti(?!ː)', 'di', ps)
     ps = ''.join(filter(lambda p: p in VOCAB, ps))
     return ps.strip()
 
@@ -131,8 +135,8 @@ def forward(model, tokens, ref_s, speed):
     asr = t_en @ pred_aln_trg.unsqueeze(0).to(device)
     return model.decoder(asr, F0_pred, N_pred, ref_s[:, :128]).squeeze().cpu().numpy()
 
-def generate(model, text, voicepack, speed=1, ps=None):
-    ps = ps or phonemize(text)
+def generate(model, text, voicepack, lang='a', speed=1):
+    ps = phonemize(text, lang)
     tokens = tokenize(ps)
     if not tokens:
         return None
