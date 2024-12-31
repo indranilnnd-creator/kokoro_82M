@@ -12,12 +12,10 @@ pipeline_tag: text-to-speech
 
 **Kokoro** is a frontier TTS model for its size of **82 million parameters** (text in/audio out).
 
-On 25 Dec 2024, Kokoro v0.19 weights were permissively released in full fp32 precision along with 2 voicepacks (Bella and Sarah), all under an Apache 2.0 license.
+On 25 Dec 2024, Kokoro v0.19 weights were permissively released in full fp32 precision under an Apache 2.0 license. As of 30 Dec 2024, 9 unique Voicepacks have been released.
 
-As of 28 Dec 2024, **8 unique Voicepacks have been released**: 2F 2M each for American and British English.
-
-At the time of release, Kokoro v0.19 was the #1🥇 ranked model in [TTS Spaces Arena](https://huggingface.co/spaces/Pendrokar/TTS-Spaces-Arena). Kokoro had achieved higher Elo in this single-voice Arena setting over other models, using fewer parameters and less data:
-1. **Kokoro v0.19: 82M params, Apache, trained on <100 hours of audio, for <20 epochs**
+In the weeks leading up to its release, Kokoro v0.19 was the #1🥇 ranked model in [TTS Spaces Arena](https://huggingface.co/hexgrad/Kokoro-82M#evaluation). Kokoro had achieved higher Elo in this single-voice Arena setting over other models, using fewer parameters and less data:
+1. **Kokoro v0.19: 82M params, Apache, trained on <100 hours of audio**
 2. XTTS v2: 467M, CPML, >10k hours
 3. Edge TTS: Microsoft, proprietary
 4. MetaVoice: 1.2B, Apache, 100k hours
@@ -44,14 +42,15 @@ import torch
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 MODEL = build_model('kokoro-v0_19.pth', device)
 VOICE_NAME = [
-    'af', # Default voice is a 50-50 mix of af_bella & af_sarah
+    'af', # Default voice is a 50-50 mix of Bella & Sarah
     'af_bella', 'af_sarah', 'am_adam', 'am_michael',
     'bf_emma', 'bf_isabella', 'bm_george', 'bm_lewis',
+    'af_nicole', # ASMR voice
 ][0]
 VOICEPACK = torch.load(f'voices/{VOICE_NAME}.pt', weights_only=True).to(device)
 print(f'Loaded voice: {VOICE_NAME}')
 
-# 3️⃣ Call generate, which returns a 24khz audio waveform and a string of output phonemes
+# 3️⃣ Call generate, which returns 24khz audio and the phonemes used
 from kokoro import generate
 text = "How could I know? It's an unanswerable question. Like asking an unborn child if they'll lead a good life. They haven't even been born."
 audio, out_ps = generate(MODEL, text, VOICEPACK, lang=VOICE_NAME[0])
@@ -87,6 +86,7 @@ No affiliation can be assumed between parties on different lines.
 - 25 Dec 2024: Model v0.19, `af_bella`, `af_sarah`
 - 26 Dec 2024: `am_adam`, `am_michael`
 - 28 Dec 2024: `bf_emma`, `bf_isabella`, `bm_george`, `bm_lewis`
+- 30 Dec 2024: `af_nicole`
 
 ### Licenses
 - Apache 2.0 weights in this repository
