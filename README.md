@@ -12,7 +12,7 @@ pipeline_tag: text-to-speech
 
 **Kokoro** is a frontier TTS model for its size of **82 million parameters** (text in/audio out).
 
-On 25 Dec 2024, Kokoro v0.19 weights were permissively released in full fp32 precision under an Apache 2.0 license. As of 30 Dec 2024, 9 unique Voicepacks have been released.
+On 25 Dec 2024, Kokoro v0.19 weights were permissively released in full fp32 precision under an Apache 2.0 license. As of 31 Dec 2024, 10 unique Voicepacks have been released.
 
 In the weeks leading up to its release, Kokoro v0.19 was the #1🥇 ranked model in [TTS Spaces Arena](https://huggingface.co/hexgrad/Kokoro-82M#evaluation). Kokoro had achieved higher Elo in this single-voice Arena setting over other models, using fewer parameters and less data:
 1. **Kokoro v0.19: 82M params, Apache, trained on <100 hours of audio**
@@ -45,7 +45,7 @@ VOICE_NAME = [
     'af', # Default voice is a 50-50 mix of Bella & Sarah
     'af_bella', 'af_sarah', 'am_adam', 'am_michael',
     'bf_emma', 'bf_isabella', 'bm_george', 'bm_lewis',
-    'af_nicole', # ASMR voice
+    'af_nicole', 'af_sky',
 ][0]
 VOICEPACK = torch.load(f'voices/{VOICE_NAME}.pt', weights_only=True).to(device)
 print(f'Loaded voice: {VOICE_NAME}')
@@ -87,6 +87,7 @@ No affiliation can be assumed between parties on different lines.
 - 26 Dec 2024: `am_adam`, `am_michael`
 - 28 Dec 2024: `bf_emma`, `bf_isabella`, `bm_george`, `bm_lewis`
 - 30 Dec 2024: `af_nicole`
+- 31 Dec 2024: `af_sky`
 
 ### Licenses
 - Apache 2.0 weights in this repository
