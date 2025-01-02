@@ -150,6 +150,6 @@ Refer to the [Philosophy discussion](https://huggingface.co/hexgrad/Kokoro-82M/d
 
 `@rzvzn` on Discord. Server invite: https://discord.gg/QuGxSWBfQy
 
-<a href="https://terminator.fandom.com/wiki/Kokoro" target="_blank">
-    <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/08/terminator-zero-41-1.jpg" width="400" alt="kokoro" />
-</a>
+<img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/08/terminator-zero-41-1.jpg" width="400" alt="kokoro" />
+
+https://terminator.fandom.com/wiki/Kokoro
