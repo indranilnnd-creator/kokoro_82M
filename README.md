@@ -12,7 +12,7 @@ pipeline_tag: text-to-speech
 
 **Kokoro** is a frontier TTS model for its size of **82 million parameters** (text in/audio out).
 
-On 25 Dec 2024, Kokoro v0.19 weights were permissively released in full fp32 precision under an Apache 2.0 license. As of 31 Dec 2024, 10 unique Voicepacks have been released.
+On 25 Dec 2024, Kokoro v0.19 weights were permissively released in full fp32 precision under an Apache 2.0 license. As of 2 Jan 2025, 10 unique Voicepacks have been released, and a `.onnx` version of v0.19 is available.
 
 In the weeks leading up to its release, Kokoro v0.19 was the #1🥇 ranked model in [TTS Spaces Arena](https://huggingface.co/hexgrad/Kokoro-82M#evaluation). Kokoro had achieved higher Elo in this single-voice Arena setting over other models, using fewer parameters and less data:
 1. **Kokoro v0.19: 82M params, Apache, trained on <100 hours of audio**
@@ -63,7 +63,9 @@ from IPython.display import display, Audio
 display(Audio(data=audio, rate=24000, autoplay=True))
 print(out_ps)
 ```
-The inference code was quickly hacked together on Christmas Day. It is not clean code and leaves a lot of room for improvement. If you'd like to contribute, feel free to open a PR.
+If you have trouble with `espeak-ng`, see this [github issue](https://github.com/bootphon/phonemizer/issues/44#issuecomment-1540885186). [Mac users also see this](https://huggingface.co/hexgrad/Kokoro-82M/discussions/12#677435d3d8ace1de46071489), and [Windows users see this](https://huggingface.co/hexgrad/Kokoro-82M/discussions/12#67742594fdeebf74f001ecfc).
+
+For ONNX usage, see [#14](https://huggingface.co/hexgrad/Kokoro-82M/discussions/14).
 
 ### Model Facts
 
@@ -88,6 +90,7 @@ No affiliation can be assumed between parties on different lines.
 - 28 Dec 2024: `bf_emma`, `bf_isabella`, `bm_george`, `bm_lewis`
 - 30 Dec 2024: `af_nicole`
 - 31 Dec 2024: `af_sky`
+- 2 Jan 2025: ONNX v0.19 `ebef4245`
 
 ### Licenses
 - Apache 2.0 weights in this repository
