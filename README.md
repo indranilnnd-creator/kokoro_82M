@@ -31,6 +31,7 @@ You can find a hosted demo at [hf.co/spaces/hexgrad/Kokoro-TTS](https://huggingf
 The following can be run in a single cell on [Google Colab](https://colab.research.google.com/).
 ```py
 # 1️⃣ Install dependencies silently
+!git lfs install
 !git clone https://huggingface.co/hexgrad/Kokoro-82M
 %cd Kokoro-82M
 !apt-get -qq -y install espeak-ng > /dev/null 2>&1
