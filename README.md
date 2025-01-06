@@ -8,6 +8,8 @@ pipeline_tag: text-to-speech
 ---
 ❤️ Kokoro Discord Server: https://discord.gg/QuGxSWBfQy
 
+📣 Got Synthetic Data? Want Trained Voicepacks? See https://hf.co/posts/hexgrad/418806998707773
+
 <audio controls><source src="https://huggingface.co/hexgrad/Kokoro-82M/resolve/main/demo/HEARME.wav" type="audio/wav"></audio>
 
 **Kokoro** is a frontier TTS model for its size of **82 million parameters** (text in/audio out).
