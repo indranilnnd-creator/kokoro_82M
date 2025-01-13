@@ -6,9 +6,11 @@ base_model:
 - yl4579/StyleTTS2-LJSpeech
 pipeline_tag: text-to-speech
 ---
+📣 Jan 12 Status: Intent to improve the base model https://hf.co/hexgrad/Kokoro-82M/discussions/36
+
 ❤️ Kokoro Discord Server: https://discord.gg/QuGxSWBfQy
 
-📣 Got Synthetic Data? Want Trained Voicepacks? See https://hf.co/posts/hexgrad/418806998707773
+🚨 Got Synthetic Data? Want Trained Voicepacks? See https://hf.co/posts/hexgrad/418806998707773
 
 <audio controls><source src="https://huggingface.co/hexgrad/Kokoro-82M/resolve/main/demo/HEARME.wav" type="audio/wav"></audio>
 
