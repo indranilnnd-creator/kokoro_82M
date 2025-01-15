@@ -124,7 +124,7 @@ assert torch.equal(af, torch.load('voices/af.pt', weights_only=True))
 
 ### Training Details
 
-**Compute:** Kokoro was trained on A100 80GB vRAM instances rented from [Vast.ai](https://cloud.vast.ai/?ref_id=79907) (referral link). Vast was chosen over other compute providers due to its competitive on-demand hourly rates. The average hourly cost for the A100 80GB vRAM instances used for training was below $1/hr per GPU, which was around half the quoted rates from other providers at the time.
+**Compute:** Kokoro v0.19 was trained on A100 80GB vRAM instances for approximately 500 total GPU hours. The average cost for each GPU hour was around $0.80, so the total cost was around $400.
 
 **Data:** Kokoro was trained exclusively on **permissive/non-copyrighted audio data** and IPA phoneme labels. Examples of permissive/non-copyrighted audio include:
 - Public domain audio
