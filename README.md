@@ -80,4 +80,13 @@ for i, (gs, ps, audio) in enumerate(generator):
 
 **Total Dataset Size:** A few hundred hours of audio
 
+### Creative Commons Attribution
+
+The following CC BY audio was part of the dataset used to train Kokoro v1.0.
+
+| Audio Data | Duration Used | License | Added to Training Set After |
+| ---------- | ------------- | ------- | --------------------------- |
+| [Koniwa](https://github.com/koniwa/koniwa) `tnc` | <1h | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/deed.ja) | v0.19 / 22 Nov 2024 |
+| [SIWIS](https://datashare.ed.ac.uk/handle/10283/2353) | <11h | [CC BY 4.0](https://datashare.ed.ac.uk/bitstream/handle/10283/2353/license_text) | v0.19 / 22 Nov 2024 |
+
 <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/08/terminator-zero-41-1.jpg" width="400" alt="kokoro" />
