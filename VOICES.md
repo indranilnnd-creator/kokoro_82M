@@ -67,9 +67,9 @@ Hindi G2P: espeak-ng `hi`
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade |
 | ---- | ------ | -------------- | ----------------- | ------------- |
-| hf_alpha | 🚺 | B | H hours | C+ |
-| hf_beta | 🚺 | B | H hours | C+ |
-| hm_omega | 🚹 | B | H hours | C+ |
-| hm_psi | 🚹 | B | H hours | C+ |
+| hf_alpha | 🚺 | B | MM minutes | C |
+| hf_beta | 🚺 | B | MM minutes | C |
+| hm_omega | 🚹 | B | MM minutes | C |
+| hm_psi | 🚹 | B | MM minutes | C |
 
 This table lists all Hindi training data seen by Kokoro, which totals about 6 hours.
