@@ -12,4 +12,6 @@ pipeline_tag: text-to-speech
 
 ❤️ Kokoro Discord Server: https://discord.gg/QuGxSWBfQy
 
+**Model SHA256 Hash:** `496dba118d1a58f5f3db2efc88dbdc216e0483fc89fe6e47ee1f2c53f18ad1e4`
+
 <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/08/terminator-zero-41-1.jpg" width="400" alt="kokoro" />
