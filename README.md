@@ -20,10 +20,22 @@ pipeline_tag: text-to-speech
 
 ### Kokoro is getting an upgrade!
 
-| Model | Date | Training Data | A100 80GB vRAM | GPU Cost | Released Voices | Released Langs |
-| ----- | ---- | ------------- | -------------- | -------- | --------------- | -------------- |
-| v0.19 | 2024 Dec 25 | <100h | 500 hrs | $400 | 10 | 1 |
-| v1.0 | 2025 Jan 27 | Few hundred hrs | 1000 hrs | $1000 | [26+](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) | ? |
+| Model | Published | Training Data | Compute (A100 80GB) | Released Voices | Released Langs |
+| ----- | --------- | ------------- | ------------------- | --------------- | -------------- |
+| v0.19 | 2024 Dec 25 | <100 hrs | 500 hrs @ $400 | 10 | 1 |
+| **v1.0** | 2025 Jan 27 | Few hundred hrs | 1000 hrs @ $1000 | [27+](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) | [2+](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) |
+
+Training is continuous. The v0.19 model was produced "on the way" to the v1.0 model, so the Compute footprints overlap.
+
+### Voices and Languages
+
+Voices are listed in [VOICES.md](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md). Not all voices are created equal:
+- Subjectively, voices will sound better or worse to different people.
+- Objectively, having less training data for a given voice (minutes instead of hours) lowers inference quality.
+- Objectively, poor audio quality in training data (compression, sample rate, artifacts) lowers inference quality.
+- Objectively, text-audio misalignment alignment (too much text i.e. hallucinations, or not enough text i.e. failed transcriptions) lowers inference quality.
+
+Support for non-English languages may be absent or thin due to weak G2P and/or lack of training data. Some languages are only represented by a small handful or even just one voice (French).
 
 ### Usage
 

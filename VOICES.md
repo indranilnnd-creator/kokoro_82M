@@ -2,7 +2,7 @@
 
 For each voice, the given grades are intended to be estimates of the **quality and quantity** of its associated training data, both of which impact overall inference quality.
 
-Voices may also subjectively sound better or worse to different people.
+Subjectively, voices will sound better or worse to different people.
 
 **Target Quality**
 - How high quality is the reference voice? This grade may be impacted by audio quality, artifacts, compression, & sample rate.
@@ -13,14 +13,16 @@ Voices may also subjectively sound better or worse to different people.
 
 ### American 🇺🇸
 
+American G2P: [`misaki[en]`](https://github.com/hexgrad/misaki) with `en-us` espeak-ng fallback
+
 | Name | Traits | Target Quality | Training Duration | Overall Grade |
 | ---- | ------ | -------------- | ----------------- | ------------- |
 | af_alloy | 🚺 | B | MM minutes | C |
-| af_aoede | 🚺 | A | H hours | B+ |
-| af_bella | 🚺🔥 | A | HH hours | A- |
+| af_aoede | 🚺 | B | H hours | C+ |
+| af_bella | 🚺🔥 | **A** | **HH hours** | **A-** |
 | af_jessica | 🚺 | C | MM minutes | D |
 | af_kore | 🚺 | B | H hours | C+ |
-| af_nicole | 🚺🎧 | B | HH hours | B- |
+| af_nicole | 🚺🎧 | B | **HH hours** | B- |
 | af_nova | 🚺 | B | MM minutes | C |
 | af_river | 🚺 | C | MM minutes | D |
 | af_sarah | 🚺 | B | H hours | C+ |
@@ -36,13 +38,23 @@ Voices may also subjectively sound better or worse to different people.
 
 ### British 🇬🇧
 
+British G2P: [`misaki[en]`](https://github.com/hexgrad/misaki) with `en-gb` espeak-ng fallback
+
 | Name | Traits | Target Quality | Training Duration | Overall Grade |
 | ---- | ------ | -------------- | ----------------- | ------------- |
 | bf_alice | 🚺 | C | MM minutes | D |
-| bf_emma | 🚺 | B | HH hours | B- |
+| bf_emma | 🚺 | B | **HH hours** | B- |
 | bf_isabella | 🚺 | B | MM minutes | C |
 | bf_lily | 🚺 | C | MM minutes | D |
 | bm_daniel | 🚹 | C | MM minutes | D |
 | bm_fable | 🚹 | B | MM minutes | C |
 | bm_george | 🚹 | B | MM minutes | C |
 | bm_lewis | 🚹 | C | H hours | D+ |
+
+### French 🇫🇷
+
+French G2P: espeak-ng `fr-fr`
+
+| Name | Traits | Target Quality | Training Duration | Overall Grade |
+| ---- | ------ | -------------- | ----------------- | ------------- |
+| [ff_siwis](https://datashare.ed.ac.uk/handle/10283/2353) | 🚺 | B | <11 hours | B- |
