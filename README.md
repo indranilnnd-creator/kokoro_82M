@@ -8,9 +8,22 @@ pipeline_tag: text-to-speech
 ---
 🚨 **This repository is undergoing maintenance.**
 
+✨ Model v1.0 release is underway! Things are not yet finalized, but you can start [using v1.0 now](https://huggingface.co/hexgrad/Kokoro-82M#usage).
+
+✨ You can now [`pip install kokoro`](https://pypi.org/project/kokoro/), a dedicated inference library: https://github.com/hexgrad/kokoro
+
+✨ You can also [`pip install misaki`](https://pypi.org/project/misaki/), a G2P library designed for Kokoro: https://github.com/hexgrad/misaki
+
 ♻️ You can access old files for v0.19 at https://huggingface.co/hexgrad/kLegacy/tree/main/v0.19
 
 ❤️ Kokoro Discord Server: https://discord.gg/QuGxSWBfQy
+
+### Kokoro is getting an upgrade!
+
+| Model | Date | Training Data | A100 80GB vRAM | GPU Cost | Released Voices | Released Langs |
+| ----- | ---- | ------------- | -------------- | -------- | --------------- | -------------- |
+| v0.19 | 2024 Dec 25 | <100h | 500 hrs | $400 | 10 | 1 |
+| v1.0 | 2025 Jan 27 | Few hundred hrs | 1000 hrs | $1000 | [26+](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) | ? |
 
 ### Usage
 
