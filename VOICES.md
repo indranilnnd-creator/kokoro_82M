@@ -58,3 +58,18 @@ French G2P: espeak-ng `fr-fr`
 | Name | Traits | Target Quality | Training Duration | Overall Grade |
 | ---- | ------ | -------------- | ----------------- | ------------- |
 | [ff_siwis](https://datashare.ed.ac.uk/handle/10283/2353) | 🚺 | B | <11 hours | B- |
+
+This table lists all French training data seen by Kokoro.
+
+### Hindi 🇮🇳
+
+Hindi G2P: espeak-ng `hi`
+
+| Name | Traits | Target Quality | Training Duration | Overall Grade |
+| ---- | ------ | -------------- | ----------------- | ------------- |
+| hf_alpha | 🚺 | B | H hours | C+ |
+| hf_beta | 🚺 | B | H hours | C+ |
+| hm_omega | 🚹 | B | H hours | C+ |
+| hm_psi | 🚹 | B | H hours | C+ |
+
+This table lists all Hindi training data seen by Kokoro, which totals about 6 hours.
