@@ -8,42 +8,27 @@ pipeline_tag: text-to-speech
 ---
 🚨 **This repository is undergoing maintenance.**
 
-✨ Model v1.0 release is underway! Things are not yet finalized, but you can start [using v1.0 now](https://huggingface.co/hexgrad/Kokoro-82M#usage).
+✨ v1.0 release is underway! Things are not yet finalized, but you can start [using v1.0 now](https://huggingface.co/hexgrad/Kokoro-82M#usage).
 
-✨ You can now [`pip install kokoro`](https://pypi.org/project/kokoro/), a dedicated inference library: https://github.com/hexgrad/kokoro
-
-✨ You can also [`pip install misaki`](https://pypi.org/project/misaki/), a G2P library designed for Kokoro: https://github.com/hexgrad/misaki
-
-♻️ You can access old files for v0.19 at https://huggingface.co/hexgrad/kLegacy/tree/main/v0.19
+♻️ Old v0.19 files: https://hf.co/hexgrad/kLegacy/tree/main/v0.19
 
 ❤️ Kokoro Discord Server: https://discord.gg/QuGxSWBfQy
 
-### Kokoro is getting an upgrade!
+**Kokoro** is a multilingual TTS model with 82 million parameters.
 
-| Model | Published | Training Data | Compute (A100 80GB) | Released Voices | Released Langs |
-| ----- | --------- | ------------- | ------------------- | --------------- | -------------- |
-| v0.19 | 2024 Dec 25 | <100 hrs | 500 hrs @ $400 | 10 | 1 |
-| **v1.0** | 2025 Jan 27 | Few hundred hrs | 1000 hrs @ $1000 | [31+](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) | [3+](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) |
-
-Training is continuous. The v0.19 model was produced "on the way" to the v1.0 model, so the Compute footprints overlap.
-
-### Voices and Languages
-
-Voices are listed in [VOICES.md](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md). Not all voices are created equal:
-- Subjectively, voices will sound better or worse to different people.
-- Objectively, having less training data for a given voice (minutes instead of hours) lowers inference quality.
-- Objectively, poor audio quality in training data (compression, sample rate, artifacts) lowers inference quality.
-- Objectively, text-audio misalignment alignment (too much text i.e. hallucinations, or not enough text i.e. failed transcriptions) lowers inference quality.
-
-Support for non-English languages may be absent or thin due to weak G2P and/or lack of training data. Some languages are only represented by a small handful or even just one voice (French).
-
-Most voices perform best on a "goldilocks range" of 100-200 tokens out of ~500 possible. Voices may perform worse at the extremes:
-- **Weakness** on short utterances, especially less than 10-20 tokens. Root cause could be lack of short-utterance training data and/or model architecture. One possible inference mitigation is to bundle shorter utterances together.
-- **Rushing** on long utterances, especially over 400 tokens. You can chunk down to shorter utterances or adjust the `speed` parameter to mitigate this.
+- [Usage](https://huggingface.co/hexgrad/Kokoro-82M#usage)
+- [Releases](https://huggingface.co/hexgrad/Kokoro-82M#releases)
+- [Voices and Languages](https://huggingface.co/hexgrad/Kokoro-82M#voices-and-languages)
+- [Model Facts](https://huggingface.co/hexgrad/Kokoro-82M#model-facts)
+- [Training Details](https://huggingface.co/hexgrad/Kokoro-82M#training-details)
+- [Creative Commons Attribution](https://huggingface.co/hexgrad/Kokoro-82M#creative-commons-attribution)
+- [Acknowledgements](https://huggingface.co/hexgrad/Kokoro-82M#acknowledgements)
 
 ### Usage
 
-The following can be run in a single cell on [Google Colab](https://colab.research.google.com/).
+[`pip install kokoro`](https://pypi.org/project/kokoro/) installs the inference library at https://github.com/hexgrad/kokoro
+
+You can run this cell on [Google Colab](https://colab.research.google.com/).
 ```py
 # 1️⃣ Install kokoro
 !pip install -q kokoro>=0.2.3 soundfile
@@ -85,6 +70,33 @@ for i, (gs, ps, audio) in enumerate(generator):
     sf.write(f'{i}.wav', audio, 24000) # save each audio file
 ```
 
+Behind the scenes, the `kokoro` library uses [`misaki`](https://pypi.org/project/misaki/), a G2P library: https://github.com/hexgrad/misaki
+
+### Releases
+
+| Model | Published | Training Data | Compute (A100 80GB) | Released Langs & Voices | SHA256 |
+| ----- | --------- | ------------- | ------------------- | ----------------------- | ------ |
+| **v1.0** | 2025 Jan 27 | Few hundred hrs | $1000 for 1000 hrs | [3 & 31](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) | `496dba11` |
+| [v0.19](https://huggingface.co/hexgrad/kLegacy/tree/main/v0.19) | 2024 Dec 25 | <100 hrs | $400 for 500 hrs | 1 & 10 | `3b0c392f` |
+
+Training is continuous, so the compute footprints overlap.
+
+v0.19 is now deprecated. You can access at old v0.19 files at https://hf.co/hexgrad/kLegacy/tree/main/v0.19
+
+### Voices and Languages
+
+Voices are listed in [VOICES.md](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md). Not all voices are created equal:
+- Subjectively, voices will sound better or worse to different people.
+- Objectively, having less training data for a given voice (minutes instead of hours) lowers inference quality.
+- Objectively, poor audio quality in training data (compression, sample rate, artifacts) lowers inference quality.
+- Objectively, text-audio misalignment alignment (too much text i.e. hallucinations, or not enough text i.e. failed transcriptions) lowers inference quality.
+
+Support for non-English languages may be absent or thin due to weak G2P and/or lack of training data. Some languages are only represented by a small handful or even just one voice (French).
+
+Most voices perform best on a "goldilocks range" of 100-200 tokens out of ~500 possible. Voices may perform worse at the extremes:
+- **Weakness** on short utterances, especially less than 10-20 tokens. Root cause could be lack of short-utterance training data and/or model architecture. One possible inference mitigation is to bundle shorter utterances together.
+- **Rushing** on long utterances, especially over 400 tokens. You can chunk down to shorter utterances or adjust the `speed` parameter to mitigate this.
+
 ### Model Facts
 
 **Architecture:**
@@ -96,7 +108,7 @@ for i, (gs, ps, audio) in enumerate(generator):
 
 **Trained by**: `@rzvzn` on Discord
 
-**Supported Languages:** American English, British English
+**Languages:** American English, British English, French, Hindi
 
 **Model SHA256 Hash:** `496dba118d1a58f5f3db2efc88dbdc216e0483fc89fe6e47ee1f2c53f18ad1e4`
 
@@ -121,5 +133,12 @@ The following CC BY audio was part of the dataset used to train Kokoro v1.0.
 | ---------- | ------------- | ------- | --------------------------- |
 | [Koniwa](https://github.com/koniwa/koniwa) `tnc` | <1h | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/deed.ja) | v0.19 / 22 Nov 2024 |
 | [SIWIS](https://datashare.ed.ac.uk/handle/10283/2353) | <11h | [CC BY 4.0](https://datashare.ed.ac.uk/bitstream/handle/10283/2353/license_text) | v0.19 / 22 Nov 2024 |
+
+### Acknowledgements
+- [@yl4579](https://huggingface.co/yl4579) for architecting StyleTTS 2.
+- [@Pendrokar](https://huggingface.co/Pendrokar) for adding Kokoro as a contender in the TTS Spaces Arena.
+- Thank you to everyone who contributed synthetic training data.
+- Special thanks to those who donated compute.
+- Kokoro is a Japanese word that translates to "heart" or "spirit". Kokoro is also the name of an [AI in the Terminator franchise](https://terminator.fandom.com/wiki/Kokoro).
 
 <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/08/terminator-zero-41-1.jpg" width="400" alt="kokoro" />
