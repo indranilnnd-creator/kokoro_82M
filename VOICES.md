@@ -2,11 +2,13 @@
 
 - 🇺🇸 [American English](#american-english): 10F 9M
 - 🇬🇧 [British English](#british-english): 4F 4M
+- 🇯🇵 [Japanese](#japanese): 4F 1M
+- 🇨🇳 [Mandarin Chinese](#mandarin-chinese): 4F 4M
+- 🇪🇸 [Spanish](#spanish): 1F 2M
 - 🇫🇷 [French](#french): 1F
 - 🇮🇳 [Hindi](#hindi): 2F 2M
 - 🇮🇹 [Italian](#italian): 1F 1M
-- 🇯🇵 [Japanese](#japanese): 4F 1M
-- 🇨🇳 [Mandarin Chinese](#mandarin-chinese): 4F 4M
+- 🇧🇷 [Brazilian Portuguese](#brazilian-portuguese): 1F 2M
 
 For each voice, the given grades are intended to be estimates of the **quality and quantity** of its associated training data, both of which impact overall inference quality.
 
@@ -27,7 +29,7 @@ Most voices perform best on a "goldilocks range" of 100-200 tokens out of ~500 p
 - 10 hours <= **HH hours** < 100 hours
 - 1 hour <= H hours < 10 hours
 - 10 minutes <= MM minutes < 100 minutes
-- 1 minute <= _M minutes_ < 10 minutes 🤏
+- 1 minute <= _M minutes_ 🤏 < 10 minutes
 
 ### American English
 
@@ -45,7 +47,7 @@ Most voices perform best on a "goldilocks range" of 100-200 tokens out of ~500 p
 | af_nova | 🚺 | B | MM minutes | C | `e0233676` |
 | af_river | 🚺 | C | MM minutes | D | `e149459b` |
 | af_sarah | 🚺 | B | H hours | C+ | `49bd364e` |
-| af_sky | 🚺🤏 | B | _M minutes_ | C- | `c799548a` |
+| af_sky | 🚺 | B | _M minutes_ 🤏 | C- | `c799548a` |
 | am_adam | 🚹 | D | H hours | F+ | `ced7e284` |
 | am_echo | 🚹 | C | MM minutes | D | `8bcfdc85` |
 | am_eric | 🚹 | C | MM minutes | D | `ada66f0e` |
@@ -54,7 +56,7 @@ Most voices perform best on a "goldilocks range" of 100-200 tokens out of ~500 p
 | am_michael | 🚹 | B | H hours | C+ | `9a443b79` |
 | am_onyx | 🚹 | C | MM minutes | D | `e8452be1` |
 | am_puck | 🚹 | B | H hours | C+ | `dd1d8973` |
-| am_santa | 🚹🤏 | C | _M minutes_ | D- | `7f2f7582` |
+| am_santa | 🚹 | C | _M minutes_ 🤏 | D- | `7f2f7582` |
 
 ### British English
 
@@ -71,6 +73,46 @@ Most voices perform best on a "goldilocks range" of 100-200 tokens out of ~500 p
 | bm_fable | 🚹 | B | MM minutes | C | `d44935f3` |
 | bm_george | 🚹 | B | MM minutes | C | `f1bc8122` |
 | bm_lewis | 🚹 | C | H hours | D+ | `b5204750` |
+
+### Japanese
+
+- `lang_code='j'` in [`misaki[ja]`](https://github.com/hexgrad/misaki)
+- Total Japanese training data: H hours
+
+| Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 | CC BY |
+| ---- | ------ | -------------- | ----------------- | ------------- | ------ | ----- |
+| jf_alpha | 🚺 | B | H hours | C+ | `1bf4c9dc` | |
+| jf_gongitsune | 🚺 | B | MM minutes | C | `1b171917` | [gongitsune](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__gongitsune.txt) |
+| jf_nezumi | 🚺 | B | _M minutes_ 🤏 | C- | `d83f007a` | [nezuminoyomeiri](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__nezuminoyomeiri.txt) |
+| jf_tebukuro | 🚺 | B | MM minutes | C | `0d691790` | [tebukurowokaini](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__tebukurowokaini.txt) |
+| jm_kumo | 🚹 | B | _M minutes_ 🤏 | C- | `98340afd` | [kumonoito](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__kumonoito.txt) |
+
+### Mandarin Chinese
+
+- `lang_code='z'` in [`misaki[zh]`](https://github.com/hexgrad/misaki)
+- Total Mandarin Chinese training data: H hours
+
+| Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
+| ---- | ------ | -------------- | ----------------- | ------------- | ------ |
+| zf_xiaobei | 🚺 | C | MM minutes | D | `9b76be63` |
+| zf_xiaoni | 🚺 | C | MM minutes | D | `95b49f16` |
+| zf_xiaoxiao | 🚺 | C | MM minutes | D | `cfaf6f2d` |
+| zf_xiaoyi | 🚺 | C | MM minutes | D | `b5235dba` |
+| zm_yunjian | 🚹 | C | MM minutes | D | `76cbf8ba` |
+| zm_yunxi | 🚹 | C | MM minutes | D | `dbe6e1ce` |
+| zm_yunxia | 🚹 | C | MM minutes | D | `bb2b03b0` |
+| zm_yunyang | 🚹 | C | MM minutes | D | `5238ac22` |
+
+### Spanish
+
+- `lang_code='e'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
+- espeak-ng `es`
+
+| Name | Traits | SHA256 |
+| ---- | ------ | ------ |
+| ef_dora | 🚺 | `d9d69b0f` |
+| em_alex | 🚹 | `5eac53f7` |
+| em_santa | 🚹 | `aa8620cb` |
 
 ### French
 
@@ -106,31 +148,13 @@ Most voices perform best on a "goldilocks range" of 100-200 tokens out of ~500 p
 | if_sara | 🚺 | B | MM minutes | C | `6c0b253b` |
 | im_nicola | 🚹 | B | MM minutes | C | `234ed066` |
 
-### Japanese
+### Brazilian Portuguese
 
-- `lang_code='j'` in [`misaki[ja]`](https://github.com/hexgrad/misaki)
-- Total Japanese training data: H hours
+- `lang_code='p'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
+- espeak-ng `pt-br`
 
-| Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 | CC BY |
-| ---- | ------ | -------------- | ----------------- | ------------- | ------ | ----- |
-| jf_alpha | 🚺 | B | H hours | C+ | `1bf4c9dc` | |
-| jf_gongitsune | 🚺 | B | MM minutes | C | `1b171917` | [gongitsune](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__gongitsune.txt) |
-| jf_nezumi | 🚺🤏 | B | _M minutes_ | C- | `d83f007a` | [nezuminoyomeiri](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__nezuminoyomeiri.txt) |
-| jf_tebukuro | 🚺 | B | MM minutes | C | `0d691790` | [tebukurowokaini](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__tebukurowokaini.txt) |
-| jm_kumo | 🚹🤏 | B | _M minutes_ | C- | `98340afd` | [kumonoito](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__kumonoito.txt) |
-
-### Mandarin Chinese
-
-- `lang_code='z'` in [`misaki[zh]`](https://github.com/hexgrad/misaki)
-- Total Mandarin Chinese training data: H hours
-
-| Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
-| ---- | ------ | -------------- | ----------------- | ------------- | ------ |
-| zf_xiaobei | 🚺 | C | MM minutes | D | `9b76be63` |
-| zf_xiaoni | 🚺 | C | MM minutes | D | `95b49f16` |
-| zf_xiaoxiao | 🚺 | C | MM minutes | D | `cfaf6f2d` |
-| zf_xiaoyi | 🚺 | C | MM minutes | D | `b5235dba` |
-| zm_yunjian | 🚹 | C | MM minutes | D | `76cbf8ba` |
-| zm_yunxi | 🚹 | C | MM minutes | D | `dbe6e1ce` |
-| zm_yunxia | 🚹 | C | MM minutes | D | `bb2b03b0` |
-| zm_yunyang | 🚹 | C | MM minutes | D | `5238ac22` |
+| Name | Traits | SHA256 |
+| ---- | ------ | ------ |
+| pf_dora | 🚺 | `07e4ff98` |
+| pm_alex | 🚹 | `cf0ba8c5` |
+| pm_santa | 🚹 | `d4210316` |
