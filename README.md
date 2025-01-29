@@ -14,15 +14,24 @@ pipeline_tag: text-to-speech
 
 ❤️ Kokoro Discord Server: https://discord.gg/QuGxSWBfQy
 
-**Kokoro** is a multilingual TTS model with 82 million parameters.
+**Kokoro** is an open-weight TTS model with 82 million parameters. Despite its lightweight architecture, it delivers comparable quality to larger models while being significantly faster and more cost-efficient. With Apache-licensed weights, Kokoro can be deployed anywhere from production environments to personal projects.
 
-- [Usage](https://huggingface.co/hexgrad/Kokoro-82M#usage)
 - [Releases](https://huggingface.co/hexgrad/Kokoro-82M#releases)
+- [Usage](https://huggingface.co/hexgrad/Kokoro-82M#usage)
 - [Voices and Languages](https://huggingface.co/hexgrad/Kokoro-82M#voices-and-languages)
 - [Model Facts](https://huggingface.co/hexgrad/Kokoro-82M#model-facts)
 - [Training Details](https://huggingface.co/hexgrad/Kokoro-82M#training-details)
 - [Creative Commons Attribution](https://huggingface.co/hexgrad/Kokoro-82M#creative-commons-attribution)
 - [Acknowledgements](https://huggingface.co/hexgrad/Kokoro-82M#acknowledgements)
+
+### Releases
+
+| Model | Published | Training Data | Compute (A100 80GB) | Released Langs & Voices | SHA256 |
+| ----- | --------- | ------------- | ------------------- | ----------------------- | ------ |
+| **v1.0** | 2025 Jan 27 | Few hundred hrs | $1000 for 1000 hrs | [5 & 40](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) | `496dba11` |
+| [v0.19](https://huggingface.co/hexgrad/kLegacy/tree/main/v0.19) | 2024 Dec 25 | <100 hrs | $400 for 500 hrs | 1 & 10 | `3b0c392f` |
+
+v0.19 has been deprecated. You can access old v0.19 files [here](https://huggingface.co/hexgrad/kLegacy/tree/main/v0.19).
 
 ### Usage
 
@@ -31,22 +40,21 @@ pipeline_tag: text-to-speech
 You can run this cell on [Google Colab](https://colab.research.google.com/).
 ```py
 # 1️⃣ Install kokoro
-!pip install -q kokoro>=0.2.3 soundfile
-# 2️⃣ Install espeak, used for out-of-dictionary fallback
+!pip install -q kokoro>=0.3.1 soundfile
+# 2️⃣ Install espeak, used for English OOD fallback and some non-English languages
 !apt-get -qq -y install espeak-ng > /dev/null 2>&1
-# You can skip espeak installation, but OOD words will be skipped unless you provide a fallback
 
 # 3️⃣ Initalize a pipeline
 from kokoro import KPipeline
 from IPython.display import display, Audio
 import soundfile as sf
-# 🇺🇸 'a' => American English
-# 🇬🇧 'b' => British English
-# 🇫🇷 'f' => French fr-fr
-# 🇮🇳 'h' => Hindi hi
-pipeline = KPipeline(lang_code='a') # make sure lang_code matches voice
+# 🇺🇸 'a' => American English, 🇬🇧 'b' => British English
+# 🇫🇷 'f' => French, 🇮🇳 'h' => Hindi: apt-get install espeak-ng
+# 🇯🇵 'j' => Japanese: pip install misaki[ja]
+# 🇨🇳 'z' => Mandarin Chinese: pip install misaki[zh]
+pipeline = KPipeline(lang_code='a') # <= make sure lang_code matches voice
 
-# The following text is for demonstration purposes only, unseen during training
+# This text is for demonstration purposes only, unseen during training
 text = '''
 The sky above the port was the color of television, tuned to a dead channel.
 "It's not like I'm using," Case heard someone say, as he shouldered his way through the crowd around the door of the Chat. "It's like my body's developed this massive drug deficiency."
@@ -56,6 +64,8 @@ These were to have an enormous impact, not only because they were associated wit
 '''
 # text = 'Le dromadaire resplendissant déambulait tranquillement dans les méandres en mastiquant de petites feuilles vernissées.'
 # text = 'ट्रांसपोर्टरों की हड़ताल लगातार पांचवें दिन जारी, दिसंबर से इलेक्ट्रॉनिक टोल कलेक्शनल सिस्टम'
+# text = '「もしおれがただ偶然、そしてこうしようというつもりでなくここに立っているのなら、ちょっとばかり絶望するところだな」と、そんなことが彼の頭に思い浮かんだ。'
+# text = '中國人民不信邪也不怕邪，不惹事也不怕事，任何外國不要指望我們會拿自己的核心利益做交易，不要指望我們會吞下損害我國主權、安全、發展利益的苦果！'
 
 # 4️⃣ Generate, display, and save audio files in a loop.
 generator = pipeline(
@@ -72,24 +82,13 @@ for i, (gs, ps, audio) in enumerate(generator):
 
 Under the hood, `kokoro` uses [`misaki`](https://pypi.org/project/misaki/), a G2P library at https://github.com/hexgrad/misaki
 
-### Releases
-
-| Model | Published | Training Data | Compute (A100 80GB) | Released Langs & Voices | SHA256 |
-| ----- | --------- | ------------- | ------------------- | ----------------------- | ------ |
-| **v1.0** | 2025 Jan 27 | Few hundred hrs | $1000 for 1000 hrs | [3 & 31](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) | `496dba11` |
-| [v0.19](https://huggingface.co/hexgrad/kLegacy/tree/main/v0.19) | 2024 Dec 25 | <100 hrs | $400 for 500 hrs | 1 & 10 | `3b0c392f` |
-
-Training is continuous, so the compute footprints overlap.
-
-v0.19 is now deprecated. You can access old v0.19 files [here](https://huggingface.co/hexgrad/kLegacy/tree/main/v0.19).
-
 ### Voices and Languages
 
 Voices are listed in [VOICES.md](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md). Not all voices are created equal:
 - Subjectively, voices will sound better or worse to different people.
-- Objectively, having less training data for a given voice (minutes instead of hours) lowers inference quality.
-- Objectively, poor audio quality in training data (compression, sample rate, artifacts) lowers inference quality.
-- Objectively, text-audio misalignment alignment (too much text i.e. hallucinations, or not enough text i.e. failed transcriptions) lowers inference quality.
+- Less training data for a given voice (minutes instead of hours) => worse inference quality.
+- Poor audio quality in training data (compression, sample rate, artifacts) => worse inference quality.
+- Text-audio misalignment alignment (too much text i.e. hallucinations, or not enough text i.e. failed transcriptions) => worse inference quality.
 
 Support for non-English languages may be absent or thin due to weak G2P and/or lack of training data. Some languages are only represented by a small handful or even just one voice (French).
 
@@ -138,7 +137,7 @@ The following CC BY audio was part of the dataset used to train Kokoro v1.0.
 - [@yl4579](https://huggingface.co/yl4579) for architecting StyleTTS 2.
 - [@Pendrokar](https://huggingface.co/Pendrokar) for adding Kokoro as a contender in the TTS Spaces Arena.
 - Thank you to everyone who contributed synthetic training data.
-- Special thanks to those who donated compute.
+- Special thanks to all compute sponsors. ❤️
 - Kokoro is a Japanese word that translates to "heart" or "spirit". Kokoro is also the name of an [AI in the Terminator franchise](https://terminator.fandom.com/wiki/Kokoro).
 
 <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/08/terminator-zero-41-1.jpg" width="400" alt="kokoro" />

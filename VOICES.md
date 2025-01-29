@@ -73,3 +73,26 @@ Hindi G2P: espeak-ng `hi`
 | hm_psi | 🚹 | B | MM minutes | C |
 
 This table lists all Hindi training data seen by Kokoro, which totals about 6 hours.
+
+### Japanese 🇯🇵
+
+Japanese G2P: [`misaki[ja]`](https://github.com/hexgrad/misaki)
+
+| Name | Traits | Target Quality | Training Duration | Overall Grade |
+| ---- | ------ | -------------- | ----------------- | ------------- |
+| jf_alpha | 🚺 | B | H hours | C+ |
+
+### Mandarin Chinese 🇨🇳
+
+Mandarin Chinese G2P: [`misaki[zh]`](https://github.com/hexgrad/misaki)
+
+| Name | Traits | Target Quality | Training Duration | Overall Grade |
+| ---- | ------ | -------------- | ----------------- | ------------- |
+| zf_xiaobei | 🚺 | C | MM minutes | D |
+| zf_xiaoni | 🚺 | C | MM minutes | D |
+| zf_xiaoxiao | 🚺 | C | MM minutes | D |
+| zf_xiaoyi | 🚺 | C | MM minutes | D |
+| zm_yunjian | 🚹 | C | MM minutes | D |
+| zm_yunxi | 🚹 | C | MM minutes | D |
+| zm_yunxia | 🚹 | C | MM minutes | D |
+| zm_yunyang | 🚹 | C | MM minutes | D |
