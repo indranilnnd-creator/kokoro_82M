@@ -81,7 +81,7 @@ Under the hood, `kokoro` uses [`misaki`](https://pypi.org/project/misaki/), a G2
 
 Training is continuous, so the compute footprints overlap.
 
-v0.19 is now deprecated. You can access at old v0.19 files at https://hf.co/hexgrad/kLegacy/tree/main/v0.19
+v0.19 is now deprecated. You can access old v0.19 files [here](https://huggingface.co/hexgrad/kLegacy/tree/main/v0.19).
 
 ### Voices and Languages
 
