@@ -17,7 +17,7 @@ Subjectively, voices will sound better or worse to different people.
 
 ### American English 🇺🇸
 
-G2P: [`misaki[en]`](https://github.com/hexgrad/misaki) `lang_code='a'` with `en-us` espeak-ng fallback
+- [`misaki[en]`](https://github.com/hexgrad/misaki) `lang_code='a'` with `en-us` espeak-ng fallback
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade |
 | ---- | ------ | -------------- | ----------------- | ------------- |
@@ -42,7 +42,7 @@ G2P: [`misaki[en]`](https://github.com/hexgrad/misaki) `lang_code='a'` with `en-
 
 ### British English 🇬🇧
 
-G2P: [`misaki[en]`](https://github.com/hexgrad/misaki) `lang_code='b'` with `en-gb` espeak-ng fallback
+- [`misaki[en]`](https://github.com/hexgrad/misaki) `lang_code='b'` with `en-gb` espeak-ng fallback
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade |
 | ---- | ------ | -------------- | ----------------- | ------------- |
@@ -57,17 +57,17 @@ G2P: [`misaki[en]`](https://github.com/hexgrad/misaki) `lang_code='b'` with `en-
 
 ### French 🇫🇷
 
-G2P: espeak-ng `fr-fr`
+- espeak-ng `fr-fr`
+- Total French training data: <11 hours
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade |
 | ---- | ------ | -------------- | ----------------- | ------------- |
 | [ff_siwis](https://datashare.ed.ac.uk/handle/10283/2353) | 🚺 | B | <11 hours | B- |
 
-Total French training data: <11 hours
-
 ### Hindi 🇮🇳
 
-G2P: espeak-ng `hi`
+- espeak-ng `hi`
+- Total Hindi training data: H hours
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade |
 | ---- | ------ | -------------- | ----------------- | ------------- |
@@ -76,21 +76,19 @@ G2P: espeak-ng `hi`
 | hm_omega | 🚹 | B | MM minutes | C |
 | hm_psi | 🚹 | B | MM minutes | C |
 
-Total Hindi training data: H hours
-
 ### Japanese 🇯🇵
 
-G2P: [`misaki[ja]`](https://github.com/hexgrad/misaki)
+- [`misaki[ja]`](https://github.com/hexgrad/misaki)
+- Total Japanese training data: H hours
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade |
 | ---- | ------ | -------------- | ----------------- | ------------- |
 | jf_alpha | 🚺 | B | H hours | C+ |
 
-Total Japanese training data: H hours
-
 ### Mandarin Chinese 🇨🇳
 
-G2P: [`misaki[zh]`](https://github.com/hexgrad/misaki)
+- [`misaki[zh]`](https://github.com/hexgrad/misaki)
+- Total Mandarin Chinese training data: H hours
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade |
 | ---- | ------ | -------------- | ----------------- | ------------- |
@@ -102,5 +100,3 @@ G2P: [`misaki[zh]`](https://github.com/hexgrad/misaki)
 | zm_yunxi | 🚹 | C | MM minutes | D |
 | zm_yunxia | 🚹 | C | MM minutes | D |
 | zm_yunyang | 🚹 | C | MM minutes | D |
-
-Total Mandarin Chinese training data: H hours
