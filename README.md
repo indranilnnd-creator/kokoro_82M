@@ -70,7 +70,7 @@ for i, (gs, ps, audio) in enumerate(generator):
     sf.write(f'{i}.wav', audio, 24000) # save each audio file
 ```
 
-Behind the scenes, the `kokoro` library uses [`misaki`](https://pypi.org/project/misaki/), a G2P library: https://github.com/hexgrad/misaki
+Under the hood, `kokoro` uses [`misaki`](https://pypi.org/project/misaki/), a G2P library at https://github.com/hexgrad/misaki
 
 ### Releases
 
