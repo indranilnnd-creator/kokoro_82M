@@ -10,14 +10,15 @@ Subjectively, voices will sound better or worse to different people.
 
 **Training Duration**
 - How much audio was seen during training? Smaller durations result in a lower overall grade.
-- 10 hours <= HH hours < 100 hours
+- 10 hours <= **HH hours** < 100 hours
 - 1 hour <= H hours < 10 hours
 - 10 minutes <= MM minutes < 100 minutes
-- 1 minute <= M minutes < 10 minutes
+- 1 minute <= _M minutes_ < 10 minutes 🤏
 
 ### American English 🇺🇸
 
-- [`misaki[en]`](https://github.com/hexgrad/misaki) `lang_code='a'` with `en-us` espeak-ng fallback
+- `lang_code='a'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
+- espeak-ng `en-us` fallback
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
 | ---- | ------ | -------------- | ----------------- | ------------- | ------ |
@@ -30,7 +31,7 @@ Subjectively, voices will sound better or worse to different people.
 | af_nova | 🚺 | B | MM minutes | C | `e0233676` |
 | af_river | 🚺 | C | MM minutes | D | `e149459b` |
 | af_sarah | 🚺 | B | H hours | C+ | `49bd364e` |
-| af_sky | 🚺 | B | M minutes | C- | `c799548a` |
+| af_sky | 🚺🤏 | B | _M minutes_ | C- | `c799548a` |
 | am_adam | 🚹 | D | H hours | F+ | `ced7e284` |
 | am_echo | 🚹 | C | MM minutes | D | `8bcfdc85` |
 | am_eric | 🚹 | C | MM minutes | D | `ada66f0e` |
@@ -39,10 +40,12 @@ Subjectively, voices will sound better or worse to different people.
 | am_michael | 🚹 | B | H hours | C+ | `9a443b79` |
 | am_onyx | 🚹 | C | MM minutes | D | `e8452be1` |
 | am_puck | 🚹 | B | H hours | C+ | `dd1d8973` |
+| am_santa | 🚹🤏 | C | _M minutes_ | D- | `7f2f7582` |
 
 ### British English 🇬🇧
 
-- [`misaki[en]`](https://github.com/hexgrad/misaki) `lang_code='b'` with `en-gb` espeak-ng fallback
+- `lang_code='b'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
+- espeak-ng `en-gb` fallback
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
 | ---- | ------ | -------------- | ----------------- | ------------- | ------ |
@@ -57,6 +60,7 @@ Subjectively, voices will sound better or worse to different people.
 
 ### French 🇫🇷
 
+- `lang_code='f'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
 - espeak-ng `fr-fr`
 - Total French training data: <11 hours
 
@@ -66,6 +70,7 @@ Subjectively, voices will sound better or worse to different people.
 
 ### Hindi 🇮🇳
 
+- `lang_code='h'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
 - espeak-ng `hi`
 - Total Hindi training data: H hours
 
@@ -78,6 +83,7 @@ Subjectively, voices will sound better or worse to different people.
 
 ### Italian 🇮🇳
 
+- `lang_code='i'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
 - espeak-ng `it`
 - Total Italian training data: H hours
 
@@ -88,20 +94,20 @@ Subjectively, voices will sound better or worse to different people.
 
 ### Japanese 🇯🇵
 
-- [`misaki[ja]`](https://github.com/hexgrad/misaki)
+- `lang_code='j'` in [`misaki[ja]`](https://github.com/hexgrad/misaki)
 - Total Japanese training data: H hours
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 | CC BY |
 | ---- | ------ | -------------- | ----------------- | ------------- | ------ | ----- |
 | jf_alpha | 🚺 | B | H hours | C+ | `1bf4c9dc` | |
 | jf_gongitsune | 🚺 | B | MM minutes | C | `1b171917` | [gongitsune](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__gongitsune.txt) |
-| jf_nezumi | 🚺 | B | M minutes | C- | `d83f007a` | [nezuminoyomeiri](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__nezuminoyomeiri.txt) |
+| jf_nezumi | 🚺🤏 | B | _M minutes_ | C- | `d83f007a` | [nezuminoyomeiri](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__nezuminoyomeiri.txt) |
 | jf_tebukuro | 🚺 | B | MM minutes | C | `0d691790` | [tebukurowokaini](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__tebukurowokaini.txt) |
-| jm_kumo | 🚹 | B | M minutes | C- | `98340afd` | [kumonoito](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__kumonoito.txt) |
+| jm_kumo | 🚹🤏 | B | _M minutes_ | C- | `98340afd` | [kumonoito](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__kumonoito.txt) |
 
 ### Mandarin Chinese 🇨🇳
 
-- [`misaki[zh]`](https://github.com/hexgrad/misaki)
+- `lang_code='z'` in [`misaki[zh]`](https://github.com/hexgrad/misaki)
 - Total Mandarin Chinese training data: H hours
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
