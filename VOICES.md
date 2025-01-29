@@ -76,6 +76,16 @@ Subjectively, voices will sound better or worse to different people.
 | hm_omega | 🚹 | B | MM minutes | C | `b55f02a8` |
 | hm_psi | 🚹 | B | MM minutes | C | `2f0f055c` |
 
+### Italian 🇮🇳
+
+- espeak-ng `it`
+- Total Italian training data: H hours
+
+| Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
+| ---- | ------ | -------------- | ----------------- | ------------- | ------ |
+| if_sara | 🚺 | B | MM minutes | C | `6c0b253b` |
+| im_nicola | 🚹 | B | MM minutes | C | `234ed066` |
+
 ### Japanese 🇯🇵
 
 - [`misaki[ja]`](https://github.com/hexgrad/misaki)
