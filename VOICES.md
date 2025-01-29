@@ -1,6 +1,6 @@
 # Voices
 
-- 🇺🇸 [American English](#american-english): 10F 9M
+- 🇺🇸 [American English](#american-english): 11F 9M
 - 🇬🇧 [British English](#british-english): 4F 4M
 - 🇯🇵 [Japanese](#japanese): 4F 1M
 - 🇨🇳 [Mandarin Chinese](#mandarin-chinese): 4F 4M
@@ -38,6 +38,7 @@ Most voices perform best on a "goldilocks range" of 100-200 tokens out of ~500 p
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
 | ---- | ------ | -------------- | ----------------- | ------------- | ------ |
+| **af\_heart** | 🚺❤️ | | | **A** | `0ab5709b` |
 | af_alloy | 🚺 | B | MM minutes | C | `6d877149` |
 | af_aoede | 🚺 | B | H hours | C+ | `c03bd1a4` |
 | af_bella | 🚺🔥 | **A** | **HH hours** | **A-** | `8cb64e02` |
