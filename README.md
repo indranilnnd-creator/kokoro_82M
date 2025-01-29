@@ -12,13 +12,13 @@ pipeline_tag: text-to-speech
 
 **Kokoro** is an open-weight TTS model with 82 million parameters. Despite its lightweight architecture, it delivers comparable quality to larger models while being significantly faster and more cost-efficient. With Apache-licensed weights, Kokoro can be deployed anywhere from production environments to personal projects.
 
-- [Releases](https://huggingface.co/hexgrad/Kokoro-82M#releases)
-- [Usage](https://huggingface.co/hexgrad/Kokoro-82M#usage)
-- [Voices and Languages](https://huggingface.co/hexgrad/Kokoro-82M#voices-and-languages)
-- [Model Facts](https://huggingface.co/hexgrad/Kokoro-82M#model-facts)
-- [Training Details](https://huggingface.co/hexgrad/Kokoro-82M#training-details)
-- [Creative Commons Attribution](https://huggingface.co/hexgrad/Kokoro-82M#creative-commons-attribution)
-- [Acknowledgements](https://huggingface.co/hexgrad/Kokoro-82M#acknowledgements)
+- [Releases](#releases)
+- [Usage](#usage)
+- [VOICES.md](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) ↗️
+- [Model Facts](#model-facts)
+- [Training Details](#training-details)
+- [Creative Commons Attribution](#creative-commons-attribution)
+- [Acknowledgements](#acknowledgements)
 
 ### Releases
 
@@ -78,20 +78,6 @@ for i, (gs, ps, audio) in enumerate(generator):
 ```
 
 Under the hood, `kokoro` uses [`misaki`](https://pypi.org/project/misaki/), a G2P library at https://github.com/hexgrad/misaki
-
-### Voices and Languages
-
-Voices are listed in [VOICES.md](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md). Not all voices are created equal:
-- Subjectively, voices will sound better or worse to different people.
-- Less training data for a given voice (minutes instead of hours) => worse inference quality.
-- Poor audio quality in training data (compression, sample rate, artifacts) => worse inference quality.
-- Text-audio misalignment alignment (too much text i.e. hallucinations, or not enough text i.e. failed transcriptions) => worse inference quality.
-
-Support for non-English languages may be absent or thin due to weak G2P and/or lack of training data. Some languages are only represented by a small handful or even just one voice (French).
-
-Most voices perform best on a "goldilocks range" of 100-200 tokens out of ~500 possible. Voices may perform worse at the extremes:
-- **Weakness** on short utterances, especially less than 10-20 tokens. Root cause could be lack of short-utterance training data and/or model architecture. One possible inference mitigation is to bundle shorter utterances together.
-- **Rushing** on long utterances, especially over 400 tokens. You can chunk down to shorter utterances or adjust the `speed` parameter to mitigate this.
 
 ### Model Facts
 

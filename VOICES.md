@@ -1,8 +1,22 @@
 # Voices
 
+🇺🇸 [American English](#american-english): 10F 9M
+🇬🇧 [British English](#british-english): 4F 4M
+🇫🇷 [French](#french): 1F
+🇮🇳 [Hindi](#hindi): 2F 2M
+🇮🇹 [Italian](#italian): 1F 1M
+🇯🇵 [Japanese](#japanese): 4F 1M
+🇨🇳 [Mandarin Chinese](#mandarin-chinese): 4F 4M
+
 For each voice, the given grades are intended to be estimates of the **quality and quantity** of its associated training data, both of which impact overall inference quality.
 
 Subjectively, voices will sound better or worse to different people.
+
+Support for non-English languages may be absent or thin due to weak G2P and/or lack of training data. Some languages are only represented by a small handful or even just one voice (French).
+
+Most voices perform best on a "goldilocks range" of 100-200 tokens out of ~500 possible. Voices may perform worse at the extremes:
+- **Weakness** on short utterances, especially less than 10-20 tokens. Root cause could be lack of short-utterance training data and/or model architecture. One possible inference mitigation is to bundle shorter utterances together.
+- **Rushing** on long utterances, especially over 400 tokens. You can chunk down to shorter utterances or adjust the `speed` parameter to mitigate this.
 
 **Target Quality**
 - How high quality is the reference voice? This grade may be impacted by audio quality, artifacts, compression, & sample rate.
@@ -15,10 +29,10 @@ Subjectively, voices will sound better or worse to different people.
 - 10 minutes <= MM minutes < 100 minutes
 - 1 minute <= _M minutes_ < 10 minutes 🤏
 
-### American English 🇺🇸
+### American English
 
-- `lang_code='a'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
-- espeak-ng `en-us` fallback
+🇺🇸 `lang_code='a'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
+🇺🇸 espeak-ng `en-us` fallback
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
 | ---- | ------ | -------------- | ----------------- | ------------- | ------ |
@@ -42,10 +56,10 @@ Subjectively, voices will sound better or worse to different people.
 | am_puck | 🚹 | B | H hours | C+ | `dd1d8973` |
 | am_santa | 🚹🤏 | C | _M minutes_ | D- | `7f2f7582` |
 
-### British English 🇬🇧
+### British English
 
-- `lang_code='b'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
-- espeak-ng `en-gb` fallback
+🇬🇧 `lang_code='b'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
+🇬🇧 espeak-ng `en-gb` fallback
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
 | ---- | ------ | -------------- | ----------------- | ------------- | ------ |
@@ -58,21 +72,21 @@ Subjectively, voices will sound better or worse to different people.
 | bm_george | 🚹 | B | MM minutes | C | `f1bc8122` |
 | bm_lewis | 🚹 | C | H hours | D+ | `b5204750` |
 
-### French 🇫🇷
+### French
 
-- `lang_code='f'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
-- espeak-ng `fr-fr`
-- Total French training data: <11 hours
+🇫🇷 `lang_code='f'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
+🇫🇷 espeak-ng `fr-fr`
+🇫🇷 Total French training data: <11 hours
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 | CC BY |
 | ---- | ------ | -------------- | ----------------- | ------------- | ------ | ----- |
 | ff_siwis | 🚺 | B | <11 hours | B- | `8073bf2d` | [SIWIS](https://datashare.ed.ac.uk/handle/10283/2353) |
 
-### Hindi 🇮🇳
+### Hindi
 
-- `lang_code='h'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
-- espeak-ng `hi`
-- Total Hindi training data: H hours
+🇮🇳 `lang_code='h'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
+🇮🇳 espeak-ng `hi`
+🇮🇳 Total Hindi training data: H hours
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
 | ---- | ------ | -------------- | ----------------- | ------------- | ------ |
@@ -81,21 +95,21 @@ Subjectively, voices will sound better or worse to different people.
 | hm_omega | 🚹 | B | MM minutes | C | `b55f02a8` |
 | hm_psi | 🚹 | B | MM minutes | C | `2f0f055c` |
 
-### Italian 🇮🇳
+### Italian
 
-- `lang_code='i'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
-- espeak-ng `it`
-- Total Italian training data: H hours
+🇮🇹 `lang_code='i'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
+🇮🇹 espeak-ng `it`
+🇮🇹 Total Italian training data: H hours
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
 | ---- | ------ | -------------- | ----------------- | ------------- | ------ |
 | if_sara | 🚺 | B | MM minutes | C | `6c0b253b` |
 | im_nicola | 🚹 | B | MM minutes | C | `234ed066` |
 
-### Japanese 🇯🇵
+### Japanese
 
-- `lang_code='j'` in [`misaki[ja]`](https://github.com/hexgrad/misaki)
-- Total Japanese training data: H hours
+🇯🇵 `lang_code='j'` in [`misaki[ja]`](https://github.com/hexgrad/misaki)
+🇯🇵 Total Japanese training data: H hours
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 | CC BY |
 | ---- | ------ | -------------- | ----------------- | ------------- | ------ | ----- |
@@ -105,10 +119,10 @@ Subjectively, voices will sound better or worse to different people.
 | jf_tebukuro | 🚺 | B | MM minutes | C | `0d691790` | [tebukurowokaini](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__tebukurowokaini.txt) |
 | jm_kumo | 🚹🤏 | B | _M minutes_ | C- | `98340afd` | [kumonoito](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__kumonoito.txt) |
 
-### Mandarin Chinese 🇨🇳
+### Mandarin Chinese
 
-- `lang_code='z'` in [`misaki[zh]`](https://github.com/hexgrad/misaki)
-- Total Mandarin Chinese training data: H hours
+🇨🇳 `lang_code='z'` in [`misaki[zh]`](https://github.com/hexgrad/misaki)
+🇨🇳 Total Mandarin Chinese training data: H hours
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
 | ---- | ------ | -------------- | ----------------- | ------------- | ------ |
