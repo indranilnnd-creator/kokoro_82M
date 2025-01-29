@@ -6,13 +6,9 @@ base_model:
 - yl4579/StyleTTS2-LJSpeech
 pipeline_tag: text-to-speech
 ---
-🚨 **This repository is undergoing maintenance.**
+⬆️ **Kokoro has been upgraded to v1.0!** See [Releases](https://huggingface.co/hexgrad/Kokoro-82M#releases).
 
-✨ v1.0 release is underway! Things are not yet finalized, but you can start [using v1.0 now](https://huggingface.co/hexgrad/Kokoro-82M#usage).
-
-♻️ Old v0.19 files: https://hf.co/hexgrad/kLegacy/tree/main/v0.19
-
-❤️ Kokoro Discord Server: https://discord.gg/QuGxSWBfQy
+✨ You can now [`pip install kokoro`](https://github.com/hexgrad/kokoro)! See [Usage](https://huggingface.co/hexgrad/Kokoro-82M#usage).
 
 **Kokoro** is an open-weight TTS model with 82 million parameters. Despite its lightweight architecture, it delivers comparable quality to larger models while being significantly faster and more cost-efficient. With Apache-licensed weights, Kokoro can be deployed anywhere from production environments to personal projects.
 
@@ -26,12 +22,10 @@ pipeline_tag: text-to-speech
 
 ### Releases
 
-| Model | Published | Training Data | Compute (A100 80GB) | Released Langs & Voices | SHA256 |
-| ----- | --------- | ------------- | ------------------- | ----------------------- | ------ |
-| **v1.0** | 2025 Jan 27 | Few hundred hrs | $1000 for 1000 hrs | [5 & 44](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) | `496dba11` |
+| Model | Published | Training Data | Compute (A100 80GB) | Langs & Voices | SHA256 |
+| ----- | --------- | ------------- | ------------------- | -------------- | ------ |
+| **v1.0** | **2025 Jan 27** | **Few hundred hrs** | **$1000 for 1000 hrs** | [**5 & 44**](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) | `496dba11` |
 | [v0.19](https://huggingface.co/hexgrad/kLegacy/tree/main/v0.19) | 2024 Dec 25 | <100 hrs | $400 for 500 hrs | 1 & 10 | `3b0c392f` |
-
-v0.19 has been deprecated. You can access old v0.19 files [here](https://huggingface.co/hexgrad/kLegacy/tree/main/v0.19).
 
 ### Usage
 
@@ -134,10 +128,12 @@ The following CC BY audio was part of the dataset used to train Kokoro v1.0.
 | [SIWIS](https://datashare.ed.ac.uk/handle/10283/2353) | <11h | [CC BY 4.0](https://datashare.ed.ac.uk/bitstream/handle/10283/2353/license_text) | v0.19 / 22 Nov 2024 |
 
 ### Acknowledgements
-- [@yl4579](https://huggingface.co/yl4579) for architecting StyleTTS 2.
-- [@Pendrokar](https://huggingface.co/Pendrokar) for adding Kokoro as a contender in the TTS Spaces Arena.
-- Thank you to everyone who contributed synthetic training data.
-- Special thanks to all compute sponsors. ❤️
-- Kokoro is a Japanese word that translates to "heart" or "spirit". Kokoro is also the name of an [AI in the Terminator franchise](https://terminator.fandom.com/wiki/Kokoro).
+
+- 🛠️ [@yl4579](https://huggingface.co/yl4579) for architecting StyleTTS 2.
+- 🏆 [@Pendrokar](https://huggingface.co/Pendrokar) for adding Kokoro as a contender in the TTS Spaces Arena.
+- 📊 Thank you to everyone who contributed synthetic training data.
+- ❤️ Special thanks to all compute sponsors.
+- 👾 Discord server: https://discord.gg/QuGxSWBfQy
+- 🪽 Kokoro is a Japanese word that translates to "heart" or "spirit". Kokoro is also the name of an [AI in the Terminator franchise](https://terminator.fandom.com/wiki/Kokoro).
 
 <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/08/terminator-zero-41-1.jpg" width="400" alt="kokoro" />
