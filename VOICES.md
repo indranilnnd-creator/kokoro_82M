@@ -19,71 +19,75 @@ Subjectively, voices will sound better or worse to different people.
 
 - [`misaki[en]`](https://github.com/hexgrad/misaki) `lang_code='a'` with `en-us` espeak-ng fallback
 
-| Name | Traits | Target Quality | Training Duration | Overall Grade |
-| ---- | ------ | -------------- | ----------------- | ------------- |
-| af_alloy | 🚺 | B | MM minutes | C |
-| af_aoede | 🚺 | B | H hours | C+ |
-| af_bella | 🚺🔥 | **A** | **HH hours** | **A-** |
-| af_jessica | 🚺 | C | MM minutes | D |
-| af_kore | 🚺 | B | H hours | C+ |
-| af_nicole | 🚺🎧 | B | **HH hours** | B- |
-| af_nova | 🚺 | B | MM minutes | C |
-| af_river | 🚺 | C | MM minutes | D |
-| af_sarah | 🚺 | B | H hours | C+ |
-| af_sky | 🚺 | B | M minutes | C- |
-| am_adam | 🚹 | D | H hours | F+ |
-| am_echo | 🚹 | C | MM minutes | D |
-| am_eric | 🚹 | C | MM minutes | D |
-| am_fenrir | 🚹 | B | H hours | C+ |
-| am_liam | 🚹 | C | MM minutes | D |
-| am_michael | 🚹 | B | H hours | C+ |
-| am_onyx | 🚹 | C | MM minutes | D |
-| am_puck | 🚹 | B | H hours | C+ |
+| Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
+| ---- | ------ | -------------- | ----------------- | ------------- | ------ |
+| af_alloy | 🚺 | B | MM minutes | C | `6d877149` |
+| af_aoede | 🚺 | B | H hours | C+ | `c03bd1a4` |
+| af_bella | 🚺🔥 | **A** | **HH hours** | **A-** | `8cb64e02` |
+| af_jessica | 🚺 | C | MM minutes | D | `cdfdccb8` |
+| af_kore | 🚺 | B | H hours | C+ | `8bfbc512` |
+| af_nicole | 🚺🎧 | B | **HH hours** | B- | `c5561808` |
+| af_nova | 🚺 | B | MM minutes | C | `e0233676` |
+| af_river | 🚺 | C | MM minutes | D | `e149459b` |
+| af_sarah | 🚺 | B | H hours | C+ | `49bd364e` |
+| af_sky | 🚺 | B | M minutes | C- | `c799548a` |
+| am_adam | 🚹 | D | H hours | F+ | `ced7e284` |
+| am_echo | 🚹 | C | MM minutes | D | `8bcfdc85` |
+| am_eric | 🚹 | C | MM minutes | D | `ada66f0e` |
+| am_fenrir | 🚹 | B | H hours | C+ | `98e507ec` |
+| am_liam | 🚹 | C | MM minutes | D | `c8255075` |
+| am_michael | 🚹 | B | H hours | C+ | `9a443b79` |
+| am_onyx | 🚹 | C | MM minutes | D | `e8452be1` |
+| am_puck | 🚹 | B | H hours | C+ | `dd1d8973` |
 
 ### British English 🇬🇧
 
 - [`misaki[en]`](https://github.com/hexgrad/misaki) `lang_code='b'` with `en-gb` espeak-ng fallback
 
-| Name | Traits | Target Quality | Training Duration | Overall Grade |
-| ---- | ------ | -------------- | ----------------- | ------------- |
-| bf_alice | 🚺 | C | MM minutes | D |
-| bf_emma | 🚺 | B | **HH hours** | B- |
-| bf_isabella | 🚺 | B | MM minutes | C |
-| bf_lily | 🚺 | C | MM minutes | D |
-| bm_daniel | 🚹 | C | MM minutes | D |
-| bm_fable | 🚹 | B | MM minutes | C |
-| bm_george | 🚹 | B | MM minutes | C |
-| bm_lewis | 🚹 | C | H hours | D+ |
+| Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
+| ---- | ------ | -------------- | ----------------- | ------------- | ------ |
+| bf_alice | 🚺 | C | MM minutes | D | `d292651b` |
+| bf_emma | 🚺 | B | **HH hours** | B- | `d0a423de` |
+| bf_isabella | 🚺 | B | MM minutes | C | `cdd4c370` |
+| bf_lily | 🚺 | C | MM minutes | D | `6e09c2e4` |
+| bm_daniel | 🚹 | C | MM minutes | D | `fc3fce4e` |
+| bm_fable | 🚹 | B | MM minutes | C | `d44935f3` |
+| bm_george | 🚹 | B | MM minutes | C | `f1bc8122` |
+| bm_lewis | 🚹 | C | H hours | D+ | `b5204750` |
 
 ### French 🇫🇷
 
 - espeak-ng `fr-fr`
 - Total French training data: <11 hours
 
-| Name | Traits | Target Quality | Training Duration | Overall Grade |
-| ---- | ------ | -------------- | ----------------- | ------------- |
-| [ff_siwis](https://datashare.ed.ac.uk/handle/10283/2353) | 🚺 | B | <11 hours | B- |
+| Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 | CC BY |
+| ---- | ------ | -------------- | ----------------- | ------------- | ------ | ----- |
+| ff_siwis | 🚺 | B | <11 hours | B- | `8073bf2d` | [SIWIS](https://datashare.ed.ac.uk/handle/10283/2353) |
 
 ### Hindi 🇮🇳
 
 - espeak-ng `hi`
 - Total Hindi training data: H hours
 
-| Name | Traits | Target Quality | Training Duration | Overall Grade |
-| ---- | ------ | -------------- | ----------------- | ------------- |
-| hf_alpha | 🚺 | B | MM minutes | C |
-| hf_beta | 🚺 | B | MM minutes | C |
-| hm_omega | 🚹 | B | MM minutes | C |
-| hm_psi | 🚹 | B | MM minutes | C |
+| Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
+| ---- | ------ | -------------- | ----------------- | ------------- | ------ |
+| hf_alpha | 🚺 | B | MM minutes | C | `06906fe0` |
+| hf_beta | 🚺 | B | MM minutes | C | `63c0a1a6` |
+| hm_omega | 🚹 | B | MM minutes | C | `b55f02a8` |
+| hm_psi | 🚹 | B | MM minutes | C | `2f0f055c` |
 
 ### Japanese 🇯🇵
 
 - [`misaki[ja]`](https://github.com/hexgrad/misaki)
 - Total Japanese training data: H hours
 
-| Name | Traits | Target Quality | Training Duration | Overall Grade |
-| ---- | ------ | -------------- | ----------------- | ------------- |
-| jf_alpha | 🚺 | B | H hours | C+ |
+| Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 | CC BY |
+| ---- | ------ | -------------- | ----------------- | ------------- | ------ | ----- |
+| jf_alpha | 🚺 | B | H hours | C+ | `1bf4c9dc` | |
+| jf_gongitsune | 🚺 | B | MM minutes | C | `1b171917` | [gongitsune](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__gongitsune.txt) |
+| jf_nezumi | 🚺 | B | M minutes | C- | `d83f007a` | [nezuminoyomeiri](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__nezuminoyomeiri.txt) |
+| jf_tebukuro | 🚺 | B | MM minutes | C | `0d691790` | [tebukurowokaini](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__tebukurowokaini.txt) |
+| jm_kumo | 🚹 | B | M minutes | C- | `98340afd` | [kumonoito](https://github.com/koniwa/koniwa/blob/master/source/tnc/tnc__kumonoito.txt) |
 
 ### Mandarin Chinese 🇨🇳
 

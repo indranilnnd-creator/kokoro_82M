@@ -28,7 +28,7 @@ pipeline_tag: text-to-speech
 
 | Model | Published | Training Data | Compute (A100 80GB) | Released Langs & Voices | SHA256 |
 | ----- | --------- | ------------- | ------------------- | ----------------------- | ------ |
-| **v1.0** | 2025 Jan 27 | Few hundred hrs | $1000 for 1000 hrs | [5 & 40](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) | `496dba11` |
+| **v1.0** | 2025 Jan 27 | Few hundred hrs | $1000 for 1000 hrs | [5 & 44](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) | `496dba11` |
 | [v0.19](https://huggingface.co/hexgrad/kLegacy/tree/main/v0.19) | 2024 Dec 25 | <100 hrs | $400 for 500 hrs | 1 & 10 | `3b0c392f` |
 
 v0.19 has been deprecated. You can access old v0.19 files [here](https://huggingface.co/hexgrad/kLegacy/tree/main/v0.19).
