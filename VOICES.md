@@ -10,10 +10,14 @@ Subjectively, voices will sound better or worse to different people.
 
 **Training Duration**
 - How much audio was seen during training? Smaller durations result in a lower overall grade.
+- 10 hours <= HH hours < 100 hours
+- 1 hour <= H hours < 10 hours
+- 10 minutes <= MM minutes < 100 minutes
+- 1 minute <= M minutes < 10 minutes
 
-### American 🇺🇸
+### American English 🇺🇸
 
-American G2P: [`misaki[en]`](https://github.com/hexgrad/misaki) with `en-us` espeak-ng fallback
+G2P: [`misaki[en]`](https://github.com/hexgrad/misaki) `lang_code='a'` with `en-us` espeak-ng fallback
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade |
 | ---- | ------ | -------------- | ----------------- | ------------- |
@@ -36,9 +40,9 @@ American G2P: [`misaki[en]`](https://github.com/hexgrad/misaki) with `en-us` esp
 | am_onyx | 🚹 | C | MM minutes | D |
 | am_puck | 🚹 | B | H hours | C+ |
 
-### British 🇬🇧
+### British English 🇬🇧
 
-British G2P: [`misaki[en]`](https://github.com/hexgrad/misaki) with `en-gb` espeak-ng fallback
+G2P: [`misaki[en]`](https://github.com/hexgrad/misaki) `lang_code='b'` with `en-gb` espeak-ng fallback
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade |
 | ---- | ------ | -------------- | ----------------- | ------------- |
@@ -53,17 +57,17 @@ British G2P: [`misaki[en]`](https://github.com/hexgrad/misaki) with `en-gb` espe
 
 ### French 🇫🇷
 
-French G2P: espeak-ng `fr-fr`
+G2P: espeak-ng `fr-fr`
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade |
 | ---- | ------ | -------------- | ----------------- | ------------- |
 | [ff_siwis](https://datashare.ed.ac.uk/handle/10283/2353) | 🚺 | B | <11 hours | B- |
 
-This table lists all French training data seen by Kokoro.
+Total French training data: <11 hours
 
 ### Hindi 🇮🇳
 
-Hindi G2P: espeak-ng `hi`
+G2P: espeak-ng `hi`
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade |
 | ---- | ------ | -------------- | ----------------- | ------------- |
@@ -72,19 +76,21 @@ Hindi G2P: espeak-ng `hi`
 | hm_omega | 🚹 | B | MM minutes | C |
 | hm_psi | 🚹 | B | MM minutes | C |
 
-This table lists all Hindi training data seen by Kokoro, which totals about 6 hours.
+Total Hindi training data: H hours
 
 ### Japanese 🇯🇵
 
-Japanese G2P: [`misaki[ja]`](https://github.com/hexgrad/misaki)
+G2P: [`misaki[ja]`](https://github.com/hexgrad/misaki)
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade |
 | ---- | ------ | -------------- | ----------------- | ------------- |
 | jf_alpha | 🚺 | B | H hours | C+ |
 
+Total Japanese training data: H hours
+
 ### Mandarin Chinese 🇨🇳
 
-Mandarin Chinese G2P: [`misaki[zh]`](https://github.com/hexgrad/misaki)
+G2P: [`misaki[zh]`](https://github.com/hexgrad/misaki)
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade |
 | ---- | ------ | -------------- | ----------------- | ------------- |
@@ -96,3 +102,5 @@ Mandarin Chinese G2P: [`misaki[zh]`](https://github.com/hexgrad/misaki)
 | zm_yunxi | 🚹 | C | MM minutes | D |
 | zm_yunxia | 🚹 | C | MM minutes | D |
 | zm_yunyang | 🚹 | C | MM minutes | D |
+
+Total Mandarin Chinese training data: H hours
