@@ -94,13 +94,13 @@ Subjectively, voices will sound better or worse to different people.
 - [`misaki[zh]`](https://github.com/hexgrad/misaki)
 - Total Mandarin Chinese training data: H hours
 
-| Name | Traits | Target Quality | Training Duration | Overall Grade |
-| ---- | ------ | -------------- | ----------------- | ------------- |
-| zf_xiaobei | 🚺 | C | MM minutes | D |
-| zf_xiaoni | 🚺 | C | MM minutes | D |
-| zf_xiaoxiao | 🚺 | C | MM minutes | D |
-| zf_xiaoyi | 🚺 | C | MM minutes | D |
-| zm_yunjian | 🚹 | C | MM minutes | D |
-| zm_yunxi | 🚹 | C | MM minutes | D |
-| zm_yunxia | 🚹 | C | MM minutes | D |
-| zm_yunyang | 🚹 | C | MM minutes | D |
+| Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
+| ---- | ------ | -------------- | ----------------- | ------------- | ------ |
+| zf_xiaobei | 🚺 | C | MM minutes | D | `9b76be63` |
+| zf_xiaoni | 🚺 | C | MM minutes | D | `95b49f16` |
+| zf_xiaoxiao | 🚺 | C | MM minutes | D | `cfaf6f2d` |
+| zf_xiaoyi | 🚺 | C | MM minutes | D | `b5235dba` |
+| zm_yunjian | 🚹 | C | MM minutes | D | `76cbf8ba` |
+| zm_yunxi | 🚹 | C | MM minutes | D | `dbe6e1ce` |
+| zm_yunxia | 🚹 | C | MM minutes | D | `bb2b03b0` |
+| zm_yunyang | 🚹 | C | MM minutes | D | `5238ac22` |
