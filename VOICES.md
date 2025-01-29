@@ -1,12 +1,12 @@
 # Voices
 
-🇺🇸 [American English](#american-english): 10F 9M
-🇬🇧 [British English](#british-english): 4F 4M
-🇫🇷 [French](#french): 1F
-🇮🇳 [Hindi](#hindi): 2F 2M
-🇮🇹 [Italian](#italian): 1F 1M
-🇯🇵 [Japanese](#japanese): 4F 1M
-🇨🇳 [Mandarin Chinese](#mandarin-chinese): 4F 4M
+- 🇺🇸 [American English](#american-english): 10F 9M
+- 🇬🇧 [British English](#british-english): 4F 4M
+- 🇫🇷 [French](#french): 1F
+- 🇮🇳 [Hindi](#hindi): 2F 2M
+- 🇮🇹 [Italian](#italian): 1F 1M
+- 🇯🇵 [Japanese](#japanese): 4F 1M
+- 🇨🇳 [Mandarin Chinese](#mandarin-chinese): 4F 4M
 
 For each voice, the given grades are intended to be estimates of the **quality and quantity** of its associated training data, both of which impact overall inference quality.
 
@@ -31,8 +31,8 @@ Most voices perform best on a "goldilocks range" of 100-200 tokens out of ~500 p
 
 ### American English
 
-🇺🇸 `lang_code='a'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
-🇺🇸 espeak-ng `en-us` fallback
+- `lang_code='a'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
+- espeak-ng `en-us` fallback
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
 | ---- | ------ | -------------- | ----------------- | ------------- | ------ |
@@ -58,8 +58,8 @@ Most voices perform best on a "goldilocks range" of 100-200 tokens out of ~500 p
 
 ### British English
 
-🇬🇧 `lang_code='b'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
-🇬🇧 espeak-ng `en-gb` fallback
+- `lang_code='b'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
+- espeak-ng `en-gb` fallback
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
 | ---- | ------ | -------------- | ----------------- | ------------- | ------ |
@@ -74,9 +74,9 @@ Most voices perform best on a "goldilocks range" of 100-200 tokens out of ~500 p
 
 ### French
 
-🇫🇷 `lang_code='f'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
-🇫🇷 espeak-ng `fr-fr`
-🇫🇷 Total French training data: <11 hours
+- `lang_code='f'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
+- espeak-ng `fr-fr`
+- Total French training data: <11 hours
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 | CC BY |
 | ---- | ------ | -------------- | ----------------- | ------------- | ------ | ----- |
@@ -84,9 +84,9 @@ Most voices perform best on a "goldilocks range" of 100-200 tokens out of ~500 p
 
 ### Hindi
 
-🇮🇳 `lang_code='h'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
-🇮🇳 espeak-ng `hi`
-🇮🇳 Total Hindi training data: H hours
+- `lang_code='h'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
+- espeak-ng `hi`
+- Total Hindi training data: H hours
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
 | ---- | ------ | -------------- | ----------------- | ------------- | ------ |
@@ -97,9 +97,9 @@ Most voices perform best on a "goldilocks range" of 100-200 tokens out of ~500 p
 
 ### Italian
 
-🇮🇹 `lang_code='i'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
-🇮🇹 espeak-ng `it`
-🇮🇹 Total Italian training data: H hours
+- `lang_code='i'` in [`misaki[en]`](https://github.com/hexgrad/misaki)
+- espeak-ng `it`
+- Total Italian training data: H hours
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
 | ---- | ------ | -------------- | ----------------- | ------------- | ------ |
@@ -108,8 +108,8 @@ Most voices perform best on a "goldilocks range" of 100-200 tokens out of ~500 p
 
 ### Japanese
 
-🇯🇵 `lang_code='j'` in [`misaki[ja]`](https://github.com/hexgrad/misaki)
-🇯🇵 Total Japanese training data: H hours
+- `lang_code='j'` in [`misaki[ja]`](https://github.com/hexgrad/misaki)
+- Total Japanese training data: H hours
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 | CC BY |
 | ---- | ------ | -------------- | ----------------- | ------------- | ------ | ----- |
@@ -121,8 +121,8 @@ Most voices perform best on a "goldilocks range" of 100-200 tokens out of ~500 p
 
 ### Mandarin Chinese
 
-🇨🇳 `lang_code='z'` in [`misaki[zh]`](https://github.com/hexgrad/misaki)
-🇨🇳 Total Mandarin Chinese training data: H hours
+- `lang_code='z'` in [`misaki[zh]`](https://github.com/hexgrad/misaki)
+- Total Mandarin Chinese training data: H hours
 
 | Name | Traits | Target Quality | Training Duration | Overall Grade | SHA256 |
 | ---- | ------ | -------------- | ----------------- | ------------- | ------ |
