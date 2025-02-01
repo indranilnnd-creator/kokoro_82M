@@ -6,13 +6,13 @@ base_model:
 - yl4579/StyleTTS2-LJSpeech
 pipeline_tag: text-to-speech
 ---
-⬆️ **Kokoro has been upgraded to v1.0!** See [Releases](https://huggingface.co/hexgrad/Kokoro-82M#releases).
-
-✨ You can now [`pip install kokoro`](https://github.com/hexgrad/kokoro)! See [Usage](https://huggingface.co/hexgrad/Kokoro-82M#usage).
+**Kokoro** is an open-weight TTS model with 82 million parameters. Despite its lightweight architecture, it delivers comparable quality to larger models while being significantly faster and more cost-efficient. With Apache-licensed weights, Kokoro can be deployed anywhere from production environments to personal projects.
 
 <audio controls><source src="https://huggingface.co/hexgrad/Kokoro-82M/resolve/main/samples/HEARME.wav" type="audio/wav"></audio>
 
-**Kokoro** is an open-weight TTS model with 82 million parameters. Despite its lightweight architecture, it delivers comparable quality to larger models while being significantly faster and more cost-efficient. With Apache-licensed weights, Kokoro can be deployed anywhere from production environments to personal projects.
+⬆️ **Kokoro has been upgraded to v1.0!** See [Releases](https://huggingface.co/hexgrad/Kokoro-82M#releases).
+
+✨ You can now [`pip install kokoro`](https://github.com/hexgrad/kokoro)! See [Usage](https://huggingface.co/hexgrad/Kokoro-82M#usage).
 
 - [Releases](#releases)
 - [Usage](#usage)
@@ -43,7 +43,7 @@ pipeline_tag: text-to-speech
 You can run this cell on [Google Colab](https://colab.research.google.com/). [Listen to samples](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/SAMPLES.md).
 ```py
 # 1️⃣ Install kokoro
-!pip install -q kokoro>=0.3.1 soundfile
+!pip install -q kokoro>=0.3.4 soundfile
 # 2️⃣ Install espeak, used for English OOD fallback and some non-English languages
 !apt-get -qq -y install espeak-ng > /dev/null 2>&1
 # 🇪🇸 'e' => Spanish es
