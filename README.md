@@ -25,10 +25,16 @@ pipeline_tag: text-to-speech
 
 ### Releases
 
-| Model | Published | Training Data | Compute (A100 80GB) | Langs & Voices | SHA256 |
-| ----- | --------- | ------------- | ------------------- | -------------- | ------ |
-| **v1.0** | **2025 Jan 27** | **Few hundred hrs** | **$1000 for 1000 hrs** | [**8 & 54**](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) | `496dba11` |
-| [v0.19](https://huggingface.co/hexgrad/kLegacy/tree/main/v0.19) | 2024 Dec 25 | <100 hrs | $400 for 500 hrs | 1 & 10 | `3b0c392f` |
+| Model | Published | Training Data | Langs & Voices | SHA256 |
+| ----- | --------- | ------------- | -------------- | ------ |
+| [v0.19](https://huggingface.co/hexgrad/kLegacy/tree/main/v0.19) | 2024 Dec 25 | <100 hrs | 1 & 10 | `3b0c392f` |
+| **v1.0** | **2025 Jan 27** | **Few hundred hrs** | [**8 & 54**](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) | `496dba11` |
+
+| Training Costs | v0.19 | v1.0 | **Total** |
+| -------------- | ----- | ---- | ----- |
+| in A100 80GB GPU hours | 500 | 500 | **1000** |
+| average hourly rate | $0.80/h | $1.20/h | **$1/h** |
+| in USD | $400 | $600 | **$1000** |
 
 ### Usage
 
@@ -105,8 +111,6 @@ Under the hood, `kokoro` uses [`misaki`](https://pypi.org/project/misaki/), a G2
 
 ### Training Details
 
-**Compute:** About $1000 for 1000 hours of A100 80GB vRAM
-
 **Data:** Kokoro was trained exclusively on **permissive/non-copyrighted audio data** and IPA phoneme labels. Examples of permissive/non-copyrighted audio include:
 - Public domain audio
 - Audio licensed under Apache, MIT, etc
@@ -115,6 +119,8 @@ Under the hood, `kokoro` uses [`misaki`](https://pypi.org/project/misaki/), a G2
 [2] No synthetic audio from open TTS models or "custom voice clones"
 
 **Total Dataset Size:** A few hundred hours of audio
+
+**Total Training Cost:** About $1000 for 1000 hours of A100 80GB vRAM
 
 ### Creative Commons Attribution
 
