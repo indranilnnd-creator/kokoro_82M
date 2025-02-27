@@ -12,10 +12,13 @@ pipeline_tag: text-to-speech
 
 ⬆️ **Kokoro has been upgraded to v1.0!** See [Releases](https://huggingface.co/hexgrad/Kokoro-82M#releases).
 
+🚀 No-code Demo: https://hf.co/spaces/hexgrad/Kokoro-TTS
+
 ✨ You can now [`pip install kokoro`](https://github.com/hexgrad/kokoro)! See [Usage](https://huggingface.co/hexgrad/Kokoro-82M#usage).
 
 - [Releases](#releases)
 - [Usage](#usage)
+- [EVAL.md](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/EVAL.md) ↗️
 - [SAMPLES.md](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/SAMPLES.md) ↗️
 - [VOICES.md](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) ↗️
 - [Model Facts](#model-facts)
@@ -27,8 +30,8 @@ pipeline_tag: text-to-speech
 
 | Model | Published | Training Data | Langs & Voices | SHA256 |
 | ----- | --------- | ------------- | -------------- | ------ |
-| [v0.19](https://huggingface.co/hexgrad/kLegacy/tree/main/v0.19) | 2024 Dec 25 | <100 hrs | 1 & 10 | `3b0c392f` |
 | **v1.0** | **2025 Jan 27** | **Few hundred hrs** | [**8 & 54**](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) | `496dba11` |
+| [v0.19](https://huggingface.co/hexgrad/kLegacy/tree/main/v0.19) | 2024 Dec 25 | <100 hrs | 1 & 10 | `3b0c392f` |
 
 | Training Costs | v0.19 | v1.0 | **Total** |
 | -------------- | ----- | ---- | ----- |
@@ -43,7 +46,7 @@ pipeline_tag: text-to-speech
 You can run this cell on [Google Colab](https://colab.research.google.com/). [Listen to samples](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/SAMPLES.md).
 ```py
 # 1️⃣ Install kokoro
-!pip install -q kokoro>=0.3.4 soundfile
+!pip install -q kokoro>=0.8.0 soundfile
 # 2️⃣ Install espeak, used for English OOD fallback and some non-English languages
 !apt-get -qq -y install espeak-ng > /dev/null 2>&1
 # 🇪🇸 'e' => Spanish es
@@ -105,7 +108,7 @@ Under the hood, `kokoro` uses [`misaki`](https://pypi.org/project/misaki/), a G2
 
 **Trained by**: `@rzvzn` on Discord
 
-**Languages:** American English, British English, French, Hindi
+**Languages:** Multiple
 
 **Model SHA256 Hash:** `496dba118d1a58f5f3db2efc88dbdc216e0483fc89fe6e47ee1f2c53f18ad1e4`
 
