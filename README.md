@@ -46,7 +46,7 @@ pipeline_tag: text-to-speech
 You can run this cell on [Google Colab](https://colab.research.google.com/). [Listen to samples](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/SAMPLES.md).
 ```py
 # 1️⃣ Install kokoro
-!pip install -q kokoro>=0.8.0 soundfile
+!pip install -q kokoro>=0.8.2 soundfile
 # 2️⃣ Install espeak, used for English OOD fallback and some non-English languages
 !apt-get -qq -y install espeak-ng > /dev/null 2>&1
 # 🇪🇸 'e' => Spanish es
