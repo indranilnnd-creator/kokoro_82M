@@ -6,15 +6,13 @@ base_model:
 - yl4579/StyleTTS2-LJSpeech
 pipeline_tag: text-to-speech
 ---
-**Kokoro** is an open-weight TTS model with 82 million parameters. Despite its lightweight architecture, it delivers comparable quality to larger models while being significantly faster and more cost-efficient. With Apache-licensed weights, Kokoro can be deployed anywhere from production environments to personal projects.
+🐈 GitHub: https://github.com/hexgrad/kokoro
+
+🚀 Demo: https://hf.co/spaces/hexgrad/Kokoro-TTS
 
 <audio controls><source src="https://huggingface.co/hexgrad/Kokoro-82M/resolve/main/samples/HEARME.wav" type="audio/wav"></audio>
 
-⬆️ **Kokoro has been upgraded to v1.0!** See [Releases](https://huggingface.co/hexgrad/Kokoro-82M#releases).
-
-🚀 No-code Demo: https://hf.co/spaces/hexgrad/Kokoro-TTS
-
-✨ You can now [`pip install kokoro`](https://github.com/hexgrad/kokoro)! See [Usage](https://huggingface.co/hexgrad/Kokoro-82M#usage).
+**Kokoro** is an open-weight TTS model with 82 million parameters. Despite its lightweight architecture, it delivers comparable quality to larger models while being significantly faster and more cost-efficient. With Apache-licensed weights, Kokoro can be deployed anywhere from production environments to personal projects.
 
 - [Releases](#releases)
 - [Usage](#usage)
