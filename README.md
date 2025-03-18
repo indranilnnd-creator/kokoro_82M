@@ -38,7 +38,7 @@ pipeline_tag: text-to-speech
 | in USD | $400 | $600 | **$1000** |
 
 ### Usage
-You can run this basic cell on [Google Colab](https://colab.research.google.com/). [Listen to samples](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/SAMPLES.md). For Advanced Usage, see https://github.com/hexgrad/kokoro?tab=readme-ov-file#advanced-usage
+You can run this basic cell on [Google Colab](https://colab.research.google.com/). [Listen to samples](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/SAMPLES.md). For more languages and details, see [Advanced Usage](https://github.com/hexgrad/kokoro?tab=readme-ov-file#advanced-usage).
 ```py
 !pip install -q kokoro>=0.9.2 soundfile
 !apt-get -qq -y install espeak-ng > /dev/null 2>&1
