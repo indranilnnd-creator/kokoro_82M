@@ -10,6 +10,8 @@ pipeline_tag: text-to-speech
 
 🚀 Demo: https://hf.co/spaces/hexgrad/Kokoro-TTS
 
+🚫 Beware of fake websites: Sites like `kokorottsai [dot] com` are blank boilerplates that exploit model popularity to deceptively farm emails. The owner of this model does NOT own any domain name that includes "kokoro". Be careful who you email.
+
 <audio controls><source src="https://huggingface.co/hexgrad/Kokoro-82M/resolve/main/samples/HEARME.wav" type="audio/wav"></audio>
 
 **Kokoro** is an open-weight TTS model with 82 million parameters. Despite its lightweight architecture, it delivers comparable quality to larger models while being significantly faster and more cost-efficient. With Apache-licensed weights, Kokoro can be deployed anywhere from production environments to personal projects.
