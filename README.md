@@ -6,15 +6,17 @@ base_model:
 - yl4579/StyleTTS2-LJSpeech
 pipeline_tag: text-to-speech
 ---
-🐈 GitHub: https://github.com/hexgrad/kokoro
-
-🚀 Demo: https://hf.co/spaces/hexgrad/Kokoro-TTS
-
-🚫 Beware of fake websites: Sites like kokorottsai (snapshot at https://archive.ph/nRRnk) are deceptive boilerplates that exploit model popularity to harvest emails. [@hexgrad](https://huggingface.co/hexgrad) does NOT own any domain that includes "kokoro". Be careful who you email.
+**Kokoro** is an open-weight TTS model with 82 million parameters. Despite its lightweight architecture, it delivers comparable quality to larger models while being significantly faster and more cost-efficient. With Apache-licensed weights, Kokoro can be deployed anywhere from production environments to personal projects.
 
 <audio controls><source src="https://huggingface.co/hexgrad/Kokoro-82M/resolve/main/samples/HEARME.wav" type="audio/wav"></audio>
 
-**Kokoro** is an open-weight TTS model with 82 million parameters. Despite its lightweight architecture, it delivers comparable quality to larger models while being significantly faster and more cost-efficient. With Apache-licensed weights, Kokoro can be deployed anywhere from production environments to personal projects.
+🐈 **GitHub**: https://github.com/hexgrad/kokoro
+
+🚀 **Demo**: https://hf.co/spaces/hexgrad/Kokoro-TTS
+
+🚫 Beware of Fake Websites: Sites like kokorottsai (snapshot at https://archive.ph/nRRnk) are deceptive boilerplates that exploit model popularity to harvest emails. The model uploader does not own any domain containing "kokoro". Be careful who you email.
+
+♻️ This is an Apache-licensed model, and Kokoro has been deployed in numerous projects and commercial APIs. Although we condemn fake websites, we welcome and encourage deployment of the model in real use cases.
 
 - [Releases](#releases)
 - [Usage](#usage)
