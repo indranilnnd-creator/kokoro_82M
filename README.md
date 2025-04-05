@@ -10,7 +10,7 @@ pipeline_tag: text-to-speech
 
 🚀 Demo: https://hf.co/spaces/hexgrad/Kokoro-TTS
 
-🚫 Beware of fake websites: Sites like `kokorottsai [dot] com` are blank boilerplates that exploit model popularity to deceptively farm emails. [@hexgrad](https://huggingface.co/hexgrad) does NOT own any domain that includes "kokoro". Be careful who you email.
+🚫 Beware of fake websites: Sites like kokorottsai (snapshot at https://archive.ph/nRRnk) are deceptive boilerplates that exploit model popularity to harvest emails. [@hexgrad](https://huggingface.co/hexgrad) does NOT own any domain that includes "kokoro". Be careful who you email.
 
 <audio controls><source src="https://huggingface.co/hexgrad/Kokoro-82M/resolve/main/samples/HEARME.wav" type="audio/wav"></audio>
 
