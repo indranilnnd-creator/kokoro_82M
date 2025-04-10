@@ -15,7 +15,7 @@ pipeline_tag: text-to-speech
 🚀 **Demo**: https://hf.co/spaces/hexgrad/Kokoro-TTS
 
 > [!NOTE]
-> As of April 2025, the market rate of Kokoro served over API is likely to be **under $1 per million characters of text input**, or under 6 cents per hour of audio output. (On average, 1000 characters of input is usually about 1 minute of output.) Sources: [ArtificialAnalysis/Replicate at 65 cents per M chars](https://artificialanalysis.ai/text-to-speech/model-family/kokoro#price) and [DeepInfra at 80 cents per M chars](https://deepinfra.com/hexgrad/Kokoro-82M).
+> As of April 2025, the market rate of Kokoro served over API is **under $1 per million characters of text input**, or under $0.06 per hour of audio output. (On average, 1000 characters of input is about 1 minute of output.) Sources: [ArtificialAnalysis/Replicate at 65 cents per M chars](https://artificialanalysis.ai/text-to-speech/model-family/kokoro#price) and [DeepInfra at 80 cents per M chars](https://deepinfra.com/hexgrad/Kokoro-82M).
 >
 > This is an Apache-licensed model, and Kokoro has been deployed in numerous projects and commercial APIs. We welcome the deployment of the model in real use cases.
 
