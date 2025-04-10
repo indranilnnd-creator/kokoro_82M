@@ -5,6 +5,7 @@ language:
 base_model:
 - yl4579/StyleTTS2-LJSpeech
 pipeline_tag: text-to-speech
+pinned: true
 ---
 **Kokoro** is an open-weight TTS model with 82 million parameters. Despite its lightweight architecture, it delivers comparable quality to larger models while being significantly faster and more cost-efficient. With Apache-licensed weights, Kokoro can be deployed anywhere from production environments to personal projects.
 
@@ -112,6 +113,6 @@ The following CC BY audio was part of the dataset used to train Kokoro v1.0.
 - 📊 Thank you to everyone who contributed synthetic training data.
 - ❤️ Special thanks to all compute sponsors.
 - 👾 Discord server: https://discord.gg/QuGxSWBfQy
-- 🪽 Kokoro is a Japanese word that translates to "heart" or "spirit". Kokoro is also the name of an [AI in the Terminator franchise](https://terminator.fandom.com/wiki/Kokoro).
+- 🪽 Kokoro is a Japanese word that translates to "heart" or "spirit". It is also the name of an [AI in the Terminator franchise](https://terminator.fandom.com/wiki/Kokoro).
 
 <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/08/terminator-zero-41-1.jpg" width="400" alt="kokoro" />
