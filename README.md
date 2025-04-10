@@ -14,9 +14,15 @@ pipeline_tag: text-to-speech
 
 🚀 **Demo**: https://hf.co/spaces/hexgrad/Kokoro-TTS
 
-🚫 Beware of Fake Websites: Sites like kokorottsai (snapshot at https://archive.ph/nRRnk) are deceptive boilerplates that exploit model popularity to harvest emails. The model uploader does not own any domain containing "kokoro". Be careful who you email.
+> [!NOTE]
+> As of April 2025, the market rate of Kokoro served over API is likely to be **under $1 per million characters of text input**, or under 6 cents per hour of audio output. (On average, 1000 characters of input is usually about 1 minute of output.) Sources: [ArtificialAnalysis/Replicate at 65 cents per M chars](https://artificialanalysis.ai/text-to-speech/model-family/kokoro#price) and [DeepInfra at 80 cents per M chars](https://deepinfra.com/hexgrad/Kokoro-82M).
+>
+> This is an Apache-licensed model, and Kokoro has been deployed in numerous projects and commercial APIs. We welcome the deployment of the model in real use cases.
 
-♻️ This is an Apache-licensed model, and Kokoro has been deployed in numerous projects and commercial APIs. Although we condemn fake websites, we welcome and encourage deployment of the model in real use cases.
+> [!CAUTION]
+> Fake websites like kokorottsai_com (snapshot: https://archive.ph/nRRnk) and kokorotts_net (snapshot: https://archive.ph/60opa) are likely scams masquerading under the banner of a popular model.
+>
+> Any website containing "kokoro" in its root domain (e.g. kokorottsai_com, kokorotts_net) is **NOT owned by and NOT affiliated with this model page or its author**, and attempts to imply otherwise are red flags.
 
 - [Releases](#releases)
 - [Usage](#usage)
